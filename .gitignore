@@ -1,5 +1,10 @@
-# Visual Studio
+# Build Output paths for Debug and Release
+build-debug/
+build-release/
+
+# Visual Studio specific files
 .vs/
 
-# Build Output - Release and Debug
-x64/
+# User Specific files
+CMakeUserPresets.json
+.qtcreator/

@@ -1,0 +1,60 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24
+  },
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Qt 6.10.2 MSVC2022 Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_PREFIX_PATH": "C:/Developer/Tools/Qt/6.10.2/msvc2022_64",
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl"
+      },
+      "environment": {
+        "PATH": "C:/Developer/Tools/Qt/Tools/CMake_64/bin;C:/Developer/Tools/Qt/Tools/Ninja;C:/Developer/Tools/Qt/6.10.2/msvc2022_64/bin;$penv{PATH}"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Qt 6.10.2 MSVC2022 Release",
+      "inherits": "debug",
+      "binaryDir": "${sourceDir}/build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "hidden": true,
+      "name": "Qt",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "$env{QTDIR}"
+      },
+      "vendor": {
+        "qt-project.org/Qt": {
+          "checksum": "wVa86FgEkvdCTVp1/nxvrkaemJc="
+        }
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    }
+  ],
+  "vendor": {
+    "qt-project.org/Presets": {
+      "checksum": "F8zDoP27unHxzarNmNtyEHLUrBE="
+    }
+  }
+}
