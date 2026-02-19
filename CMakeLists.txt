@@ -3,7 +3,7 @@ project(BlendViewer VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Quick3D ShaderTools)
+find_package(Qt6 REQUIRED COMPONENTS Quick Quick3D ShaderTools Svg)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -20,20 +20,22 @@ qt_add_qml_module(appBlendViewer
     URI BlendViewer
     QML_FILES
         Main.qml
+    RESOURCES
+        assets/icons/settings.svg
 )
 
 # Sub-module: Sidebar
 # URI = "BlendViewer.Sidebar" → unique output dir: BlendViewer/Sidebar/
-qt_add_library(BlendViewer_Sidebar STATIC)
-qt_add_qml_module(BlendViewer_Sidebar
-    URI BlendViewer.Sidebar
+qt_add_library(BlendViewer_SideBar)
+qt_add_qml_module(BlendViewer_SideBar
+    URI BlendViewer.SideBar
     QML_FILES
         ui/sidebar/SideBar.qml
 )
 
 # Sub-module: StatusBar
 # URI = "BlendViewer.StatusBar" → unique output dir: BlendViewer/StatusBar/
-qt_add_library(BlendViewer_StatusBar STATIC)
+qt_add_library(BlendViewer_StatusBar)
 qt_add_qml_module(BlendViewer_StatusBar
     URI BlendViewer.StatusBar
     QML_FILES
@@ -42,7 +44,7 @@ qt_add_qml_module(BlendViewer_StatusBar
 
 # Sub-module: Viewport
 # URI = "BlendViewer.Viewport" → unique output dir: BlendViewer/Viewport/
-qt_add_library(BlendViewer_Viewport STATIC)
+qt_add_library(BlendViewer_Viewport)
 qt_add_qml_module(BlendViewer_Viewport
     URI BlendViewer.Viewport
     QML_FILES
@@ -55,7 +57,8 @@ target_link_libraries(appBlendViewer
     Qt6::Quick
     Qt6::Quick3D
     Qt6::ShaderTools
-    BlendViewer_Sidebar
+    Qt6::Svg
+    BlendViewer_SideBar
     BlendViewer_StatusBar
     BlendViewer_Viewport
 )

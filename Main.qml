@@ -1,8 +1,32 @@
 import QtQuick
+import QtQuick.Window
+
+import BlendViewer.SideBar
+import BlendViewer.StatusBar
 
 Window {
-    width: 640
-    height: 480
+
+    id: mainWindow
+
     visible: true
-    title: qsTr("Hello World")
+    // visibility: Window.FullScreen
+    visibility: Window.Maximized
+
+    color: "#171D28"
+
+    width: Screen.width * 1/2
+    height: Screen.height * 1/2
+    
+    title: qsTr("BlendViewer")
+
+    SideBar
+    {
+        id: sideBar
+    }
+
+    StatusBar
+    {
+        id: statusBar
+    }
+
 }
