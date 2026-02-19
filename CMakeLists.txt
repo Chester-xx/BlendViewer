@@ -22,6 +22,7 @@ qt_add_qml_module(appBlendViewer
         Main.qml
     RESOURCES
         assets/icons/settings.svg
+        assets/icons/import.svg
 )
 
 # Sub-module: Sidebar

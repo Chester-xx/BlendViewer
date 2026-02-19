@@ -9,8 +9,8 @@ Window {
     id: mainWindow
 
     visible: true
-    // visibility: Window.FullScreen
-    visibility: Window.Maximized
+    visibility: Window.FullScreen
+    //visibility: Window.Maximized
 
     color: "#171D28"
 
