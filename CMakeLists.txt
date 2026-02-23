@@ -23,6 +23,7 @@ qt_add_qml_module(appBlendViewer
     RESOURCES
         assets/icons/settings.svg
         assets/icons/import.svg
+        assets/icons/camera-speed.svg
 )
 
 # Sub-module: Sidebar

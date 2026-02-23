@@ -12,7 +12,7 @@ Rectangle
         top: parent.top
         bottom: parent.bottom
     }
-    width: parent.width * 1 / 8
+    width: Math.max(parent.width * 1 / 8, 200)
     height: parent.height
     color: "#111A22"
 
@@ -31,7 +31,7 @@ Rectangle
     }
     // - Right Side Border
 
-    // App Info
+// App Info
     Rectangle
     {
         id: appInfo
@@ -75,7 +75,7 @@ Rectangle
                     text: qsTr("v1.0.0")
                     leftPadding: appInfo.width * 1 / 16
                     font.pixelSize: appInfo.height * 1 / 6.7
-                    color: "#888888"
+                    color: "#94A3B8"
                 }
                 // - Version Heading
             }
@@ -87,6 +87,10 @@ Rectangle
                 id: settingsButton
                 Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 Layout.rightMargin: appInfo.width / 16
+                Layout.preferredWidth: appInfo.height * 1 / 2
+                Layout.preferredHeight: appInfo.height * 1 / 2
+                Layout.minimumWidth: 30
+                Layout.minimumHeight: 30
                 ToolTip
                 {
                     visible: settingsButton.hovered
@@ -94,11 +98,11 @@ Rectangle
                     delay: 500
                     timeout: 3000
                 }
-                width: 32
-                height: 32
                 flat: true
                 icon.source: "qrc:/qt/qml/BlendViewer/assets/icons/settings.svg"
-                icon.color: "#888888"
+                icon.color: "#94A3B8"
+                icon.width: appInfo.height * 3 / 8
+                icon.height: appInfo.height * 3 / 8
             }
             // - Settings Column
         }
@@ -247,10 +251,10 @@ Rectangle
         }
         font.pixelSize: parent.height * 1 / 120
         topPadding: 10
-        color: "#888888"
+        color: "#94A3B8"
     }
 
-    // Camera Speed
+// Camera Speed
     Rectangle
     {
         id: cameraSpeed
@@ -262,6 +266,128 @@ Rectangle
         }
         height: parent.height * 1 / 17
         color: "#0D141B"
+
+        // Rows Container
+        Column
+        {
+            id: cameraSpeedRows
+            anchors
+            {
+                centerIn: parent
+            }
+            width: parent.width * 9 / 10
+            height: parent.height * 8 / 10
+
+            // Label Container
+            Row
+            {
+                id: cameraSpeedRow1
+                width: parent.width
+                height: parent.height * 1 / 3
+
+                // Icon
+                Image
+                {
+                    id: cameraSpeedIcon
+                    source: "qrc:/qt/qml/BlendViewer/assets/icons/camera-speed.svg"
+                    width: height
+                    height: parent.height
+                }
+                // - Icon
+
+                // Text
+                Text
+                {
+                    id: cameraSpeedLabel
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: qsTr("Camera Speed")
+                    color: "#94A3B8"
+                    font.pixelSize: parent.height * 6 / 10
+                    leftPadding: 3
+                }
+                // - Text
+
+                // Spacer
+                Item
+                {
+                    id: cameraSpeedSpacer
+                    width: parent.width - cameraSpeedIcon.width - cameraSpeedLabel.width - cameraSpeedValue.width
+                    height: parent.height
+                }
+                // - Spacer
+
+                // Speed Value
+                Text
+                {
+                    id: cameraSpeedValue
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: cameraSpeedSlider.value.toFixed(1) + "x"
+                    color: "#94A3B8"
+                    font.pixelSize: parent.height * 6 / 10
+                }
+                // - Speed Value
+            }
+            // - Label Container
+
+            // Speed Slider
+                Rectangle
+                {
+                    id: cameraSpeedRow2
+                    width: parent.width
+                    height: parent.height * 2 / 3
+                    color: "transparent"
+
+                    // Speed Slider
+                    Slider
+                    {
+                        id: cameraSpeedSlider
+                        from: 0.1
+                        to: 5.0
+                        value: 1.0
+                        width: parent.width
+                        height: parent.height
+
+                        // Track
+                        background: Rectangle
+                        {
+                            x: cameraSpeedSlider.leftPadding
+                            y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
+                            width: cameraSpeedSlider.availableWidth
+                            height: 4
+                            radius: 2
+                            color: "#2A3B4F"
+
+                            // Filled Portion
+                            Rectangle
+                            {
+                                width: cameraSpeedSlider.visualPosition * parent.width
+                                height: parent.height
+                                radius: 2
+                                color: "#94A3B8"
+                            }
+                            // - Filled Portion
+                        }
+                        // - Track
+
+                        // Handle
+                        handle: Rectangle
+                        {
+                            x: cameraSpeedSlider.leftPadding + cameraSpeedSlider.visualPosition * (cameraSpeedSlider.availableWidth - width)
+                            y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
+                            width: 16
+                            height: 16
+                            radius: 8
+                            color: cameraSpeedSlider.pressed ? "#1A52C7" : cameraSpeedSlider.hovered ? "#2563EB" : "#137FEC"
+                            border.color: cameraSpeedSlider.pressed ? "#1A52C7" : cameraSpeedSlider.hovered ? "#2563EB" : "#137FEC"
+                            border.width: 1
+                        }
+                        // - Handle
+                    }
+                    // - Speed Slider
+                }
+                // - Speed Slider
+        }
+        // - Rows Container
 
         // Top Side Border
         Rectangle
