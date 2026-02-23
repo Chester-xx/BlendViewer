@@ -8,7 +8,7 @@
 - Being built with the **Qt Framework (C++ & QML)**.
 - The project focuses on providing an intuitive UI for loading, viewing, and manipulating 3D models using **Qt Quick 3D**.
 
-### [Live concept & design reference](https://chester-xx.github.io/)
+### [Live concept & design reference](https://chester-xx.github.io/blendviewer/live-reference/)
 
 ---
 
@@ -34,16 +34,33 @@
 
 ```
 BlendViewer/
+│
+├── main.cpp
+├── Main.qml
+│
 ├── src/
-│   └── main.cpp
+│   └── Modules
+│
 ├── ui/
-│   ├── main.qml
-│   └── qml.qrc
+│   └── sidebar/
+│       └── SideBar.qml
+│   └── statusbar/
+│       └── StatusBar.qml
+│   └── viewport/
+│       └── ViewPort.qml
+│
 ├── assets/
+│   └── icons/
 │   └── (test glTF files, icons, app assets, json data)
-└── x64/
-    ├── Debug/
-    └── Release/
+│
+├── build-debug/
+├── build-release/
+│
+├── CMakeLists.txt
+├── CMakePresets.json
+│
+├── README.md
+└── LICENCE
 ```
 
 1. Qt Quick Application initialization via Visual Studio
