@@ -95,7 +95,7 @@ Rectangle
                 {
                     visible: settingsButton.hovered
                     text: qsTr("Open Settings")
-                    delay: 500
+                    delay: 1000
                     timeout: 3000
                 }
                 flat: true
@@ -155,7 +155,7 @@ Rectangle
         {
             visible: importFileButton.hovered
             text: qsTr("Import a glTF model file into the viewer")
-            delay: 500
+            delay: 1000
             timeout: 3000
         }
         width: parent.width * 9 / 10
@@ -346,6 +346,13 @@ Rectangle
                         value: 1.0
                         width: parent.width
                         height: parent.height
+                        ToolTip
+                        {
+                            visible: cameraSpeedSlider.hovered
+                            text: qsTr("Change camera speed")
+                            delay: 2000
+                            timeout: 3000
+                        }
 
                         // Track
                         background: Rectangle
