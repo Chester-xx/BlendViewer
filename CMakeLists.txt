@@ -24,6 +24,9 @@ qt_add_qml_module(appBlendViewer
         assets/icons/settings.svg
         assets/icons/import.svg
         assets/icons/camera-speed.svg
+        assets/icons/mesh.svg
+        assets/icons/vertices.svg
+        assets/icons/materials.svg
 )
 
 # Sub-module: Sidebar
@@ -45,6 +48,7 @@ qt_add_qml_module(BlendViewer_StatusBar
     URI BlendViewer.StatusBar
     QML_FILES
         ui/statusbar/StatusBar.qml
+        ui/statusbar/StatusLabel.qml
 )
 
 # Sub-module: Viewport
