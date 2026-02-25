@@ -33,6 +33,9 @@ qt_add_qml_module(BlendViewer_SideBar
     URI BlendViewer.SideBar
     QML_FILES
         ui/sidebar/SideBar.qml
+        ui/sidebar/AppInfo.qml
+        ui/sidebar/ImportFileButton.qml
+        ui/sidebar/CameraSpeedController.qml
 )
 
 # Sub-module: StatusBar
