@@ -44,6 +44,9 @@ BlendViewer/
 ├── ui/
 │   └── sidebar/
 │       └── SideBar.qml
+│       └── AppInfo.qml
+│       └── ImportFileButton.qml
+│       └── CameraSpeedController.qml
 │   └── statusbar/
 │       └── StatusBar.qml
 │   └── viewport/
