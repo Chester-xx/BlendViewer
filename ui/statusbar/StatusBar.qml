@@ -60,7 +60,7 @@ Rectangle
             Layout.alignment: Qt.AlignVCenter
             // StatusLabel.qml
             // - FPS Counter
-            StatusLabel { icon: ""; value: "--"; label: "FPS" }
+            StatusLabel { icon: ""; value: "--"; label: "FPS:"; isFPS: true }
             // - Spacer
             StatusLabel { icon: ""; value: "|"; label: "" }
             // - RHI Pipeline

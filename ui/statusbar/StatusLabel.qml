@@ -7,6 +7,7 @@ Row
 	property string icon
 	property string value
 	property string label
+	property bool isFPS: false
 
 	spacing: 4
 	clip: true
@@ -31,7 +32,7 @@ Row
 	// Label Text & Value
 	Text
 	{
-		text: label !== "" ? value + " " + label : value
+		text: isFPS === true ? label + " " + value : (label !== "" ? value + " " + label : value)
 		font.pixelSize: statusBar.height * 4 / 10
 		color: "#94A3B8"
 		elide: Text.ElideRight
