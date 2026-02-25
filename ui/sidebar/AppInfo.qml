@@ -59,11 +59,14 @@ Rectangle
         {
             id: settingsButton
 
+            property color settingsIconColor: settingsButton.pressed ? "#4D84F2" : settingsButton.hovered ? "#ffffff" : "#94A3B8"
+
             flat: true
+            scale: settingsButton.pressed ? 0.92 : 1.0
             icon.source: "qrc:/qt/qml/BlendViewer/assets/icons/settings.svg"
-            icon.color: "#94A3B8"
             icon.width: appInfo.height * 3 / 8
             icon.height: appInfo.height * 3 / 8
+            icon.color: settingsIconColor
 
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             Layout.rightMargin: appInfo.width / 16
@@ -71,7 +74,39 @@ Rectangle
             Layout.preferredHeight: appInfo.height * 1 / 2
             Layout.minimumWidth: 30
             Layout.minimumHeight: 30
-            
+
+            // Remove Button Background
+            background: Rectangle
+            {
+                color: "transparent"
+                radius: width / 2
+            }
+            // - Remove Button Background
+
+            // Icon Color Property
+
+            // Icon Color Effect
+            Behavior on settingsIconColor
+            {
+                ColorAnimation
+                {
+                    duration: 150
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            // - Icon Color Effect
+
+            // Scale Effect
+            Behavior on scale
+            {
+                NumberAnimation
+                {
+                    duration: 100
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            // - Scale Effect
+
             ToolTip
             {
                 visible: settingsButton.hovered

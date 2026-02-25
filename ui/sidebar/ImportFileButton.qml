@@ -6,18 +6,14 @@ import QtQuick.Layouts
 Button
 {
     id: importFileButton
-    
+
     flat: true
-    width: parent.width * 9 / 10
-    height: parent.height * 1 / 30
+    implicitWidth: sideBar.width * 9 / 10
+    implicitHeight: sideBar.height * 1 / 30
     scale: importFileButton.pressed ? 0.98 : 1
 
-    anchors
-    {
-        top: appInfo.bottom
-        horizontalCenter: parent.horizontalCenter
-        topMargin: parent.height * 1 / 100
-    }
+    Layout.alignment: Qt.AlignHCenter
+    Layout.topMargin: sideBar.height * 1 / 100
 
     ToolTip
     {
@@ -37,7 +33,7 @@ Button
         }
     }
     // - Scale Effect
-        
+
     // Button Background
     background: Rectangle
     {
@@ -73,17 +69,14 @@ Button
             Image
             {
                 id: importIcon
-
                 source: "qrc:/qt/qml/BlendViewer/assets/icons/import.svg"
                 width: importFileButton.height * 7 / 12
                 height: importFileButton.height * 7 / 12
+                sourceSize.width: importFileButton.height * 7 / 12
+                sourceSize.height: importFileButton.height * 7 / 12
                 fillMode: Image.PreserveAspectFit
                 mipmap: true
-
-                anchors
-                {
-                    verticalCenter: parent.verticalCenter
-                }
+                anchors.verticalCenter: parent.verticalCenter
             }
             // - Icon
 
@@ -94,11 +87,7 @@ Button
                 font.pixelSize: importFileButton.height * 1 / 3
                 font.bold: true
                 color: "#ffffff"
-
-                anchors
-                {
-                    verticalCenter: parent.verticalCenter
-                }
+                anchors.verticalCenter: parent.verticalCenter
             }
             // - Label
         }

@@ -1,4 +1,5 @@
 ﻿import QtQuick
+import QtQuick.Layouts
 
 // Side Bar
 Rectangle
@@ -40,28 +41,52 @@ Rectangle
     }
     // - AppInfo.qml
 
-    // ImportFileButton.qml
-    ImportFileButton
+    // Content Scroll Controller
+    Flickable
     {
-        id: importFileButton
-    }
-    // - ImportFileButton.qml
-
-    // Import Label
-    Text
-    {
-        text: qsTr("Drag & Drop .glTF or .glb Files")
-        font.pixelSize: parent.height * 1 / 120
-        topPadding: 10
-        color: "#94A3B8"
+        id: sideBarContent
+        
+        clip: true
+        contentHeight: sideBarColumnLayout.implicitHeight
 
         anchors
         {
-            top: importFileButton.bottom
-            horizontalCenter: parent.horizontalCenter
+            top: appInfo.bottom
+            bottom: cameraSpeed.top
+            left: parent.left
+            right: parent.right
         }
+
+        // Content Layout
+        ColumnLayout
+        {
+            id: sideBarColumnLayout
+
+            width: parent.width
+            spacing: 0
+
+            // ImportFileButton.qml
+            ImportFileButton
+            {
+                id: importFileButton
+            }
+            // - ImportFileButton.qml
+
+            // Import Label
+            Text
+            {
+                text: qsTr("Drag & Drop .glTF or .glb Files")
+                font.pixelSize: sideBar.height * 1 / 110
+                topPadding: 10
+                color: "#94A3B8"
+                Layout.alignment: Qt.AlignHCenter
+            }
+            // - Import Label
+
+        }
+        // - Content Layout
     }
-    // - Import Label
+    // - Content Scroll Controller
 
     // CameraSpeedController.qml
     CameraSpeedController

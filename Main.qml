@@ -17,8 +17,8 @@ Window {
     title: qsTr("BlendViewer")
 
     // Debugging during UI iteration
-    //visibility: Window.FullScreen
-    visibility: Window.Maximized
+    visibility: Window.FullScreen
+    //visibility: Window.Maximized
 
     SideBar
     {
