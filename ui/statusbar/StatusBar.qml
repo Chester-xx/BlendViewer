@@ -1,6 +1,8 @@
 ﻿import QtQuick
 import QtQuick.Layouts
 
+import BlendViewer
+
 // Info Bar
 Rectangle
 {

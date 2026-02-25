@@ -1,6 +1,8 @@
 ﻿import QtQuick
 import QtQuick.Layouts
 
+import BlendViewer
+
 // Side Bar
 Rectangle
 {
@@ -8,7 +10,7 @@ Rectangle
 
     width: Math.max(parent.width * 1 / 8, 200)
     height: parent.height
-    color: "#111A22"
+    color: Properties.secondaryBackground
 
     anchors
     {
@@ -78,7 +80,7 @@ Rectangle
                 text: qsTr("Drag & Drop .glTF or .glb Files")
                 font.pixelSize: sideBar.height * 1 / 110
                 topPadding: 10
-                color: "#94A3B8"
+                color: Properties.textSecondary
                 Layout.alignment: Qt.AlignHCenter
             }
             // - Import Label

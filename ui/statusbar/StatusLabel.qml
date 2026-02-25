@@ -1,6 +1,8 @@
 ﻿import QtQuick
 import QtQuick.Layouts
 
+import BlendViewer
+
 // Status Label
 Row
 {
@@ -34,7 +36,7 @@ Row
 	{
 		text: isFPS === true ? label + " " + value : (label !== "" ? value + " " + label : value)
 		font.pixelSize: statusBar.height * 4 / 10
-		color: "#94A3B8"
+		color: Properties.textSecondary
 		elide: Text.ElideRight
 
 		anchors

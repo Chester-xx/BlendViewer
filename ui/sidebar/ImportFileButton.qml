@@ -2,6 +2,8 @@
 import QtQuick.Controls.Basic
 import QtQuick.Layouts
 
+import BlendViewer
+
 // Import File Button
 Button
 {
@@ -37,7 +39,7 @@ Button
     // Button Background
     background: Rectangle
     {
-        color: importFileButton.pressed ? "#1A52C7" : importFileButton.hovered ? "#2563EB" : "#137FEC"
+        color: importFileButton.pressed ? Properties.buttonPressed : importFileButton.hovered ? Properties.buttonHover : Properties.button
         radius: 7
         layer.enabled: true
 
@@ -86,7 +88,7 @@ Button
                 text: qsTr("Import glTF Model")
                 font.pixelSize: importFileButton.height * 1 / 3
                 font.bold: true
-                color: "#ffffff"
+                color: Properties.textPrimary
                 anchors.verticalCenter: parent.verticalCenter
             }
             // - Label

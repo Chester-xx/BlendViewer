@@ -2,13 +2,15 @@
 import QtQuick.Controls.Basic
 import QtQuick.Layouts
 
+import BlendViewer
+
 // Camera Speed Controller
 Rectangle
 {
     id: cameraSpeed
 
     height: parent.height * 1 / 17
-    color: "#0D141B"
+    color: Properties.tertiaryBackground
 
     anchors
     {
@@ -56,7 +58,7 @@ Rectangle
 
                 anchors.verticalCenter: parent.verticalCenter
                 text: qsTr("Camera Speed")
-                color: "#94A3B8"
+                color: Properties.textSecondary
                 font.pixelSize: parent.height * 6 / 10
                 leftPadding: 3
             }
@@ -79,7 +81,7 @@ Rectangle
 
                 anchors.verticalCenter: parent.verticalCenter
                 text: cameraSpeedSlider.value.toFixed(1) + "x"
-                color: "#94A3B8"
+                color: Properties.textSecondary
                 font.pixelSize: parent.height * 6 / 10
             }
             // - Speed Value
@@ -130,7 +132,7 @@ Rectangle
                         width: cameraSpeedSlider.visualPosition * parent.width
                         height: parent.height
                         radius: 2
-                        color: "#94A3B8"
+                        color: Properties.textSecondary
                     }
                     // - Filled Portion
                 }
@@ -144,9 +146,19 @@ Rectangle
                     width: 16
                     height: 16
                     radius: 8
-                    color: cameraSpeedSlider.pressed ? "#1A52C7" : cameraSpeedSlider.hovered ? "#2563EB" : "#137FEC"
-                    border.color: cameraSpeedSlider.pressed ? "#1A52C7" : cameraSpeedSlider.hovered ? "#2563EB" : "#137FEC"
+                    color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
+                    border.color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
                     border.width: 1
+                    // Hover Effect
+                    Behavior on color
+                    {
+                        ColorAnimation
+                        {
+                            duration: 150
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                    // - Hover Effect
                 }
                 // - Handle
             }

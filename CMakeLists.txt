@@ -1,12 +1,8 @@
 ﻿cmake_minimum_required(VERSION 3.16)
 project(BlendViewer VERSION 0.1 LANGUAGES CXX)
-
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 find_package(Qt6 REQUIRED COMPONENTS Quick Quick3D ShaderTools Svg)
-
 qt_standard_project_setup(REQUIRES 6.8)
-
 set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Main executable
@@ -14,12 +10,18 @@ qt_add_executable(appBlendViewer
     main.cpp
 )
 
-# Root QML module (Main.qml lives here)
+# Singleton declaration
+set_source_files_properties(ui/Properties.qml
+    PROPERTIES QT_QML_SINGLETON_TYPE TRUE
+)
+
+# Root QML module
 # URI = "BlendViewer" → unique output dir: BlendViewer/
 qt_add_qml_module(appBlendViewer
     URI BlendViewer
     QML_FILES
         Main.qml
+        ui/Properties.qml
     RESOURCES
         assets/icons/settings.svg
         assets/icons/import.svg

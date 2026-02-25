@@ -2,13 +2,15 @@
 import QtQuick.Controls.Basic
 import QtQuick.Layouts
 
+import BlendViewer
+
 // App Info
 Rectangle
 {
     id: appInfo
 
     height: parent.height * 1 / 17
-    color: "#0D141B"
+    color: Properties.tertiaryBackground
 
     anchors
     {
@@ -38,7 +40,7 @@ Rectangle
                 leftPadding: appInfo.width * 1 / 16
                 font.pixelSize: appInfo.height * 1 / 4.7
                 font.bold: true
-                color: "#ffffff"
+                color: Properties.textPrimary
             }
             // - Studio Heading
 
@@ -48,7 +50,7 @@ Rectangle
                 text: qsTr("v1.0.0")
                 leftPadding: appInfo.width * 1 / 16
                 font.pixelSize: appInfo.height * 1 / 6.7
-                color: "#94A3B8"
+                color: Properties.textSecondary
             }
             // - Version Heading
         }
@@ -59,7 +61,7 @@ Rectangle
         {
             id: settingsButton
 
-            property color settingsIconColor: settingsButton.pressed ? "#4D84F2" : settingsButton.hovered ? "#ffffff" : "#94A3B8"
+            property color settingsIconColor: settingsButton.pressed ? "#4D84F2" : settingsButton.hovered ? Properties.textPrimary : Properties.textSecondary
 
             flat: true
             scale: settingsButton.pressed ? 0.92 : 1.0
