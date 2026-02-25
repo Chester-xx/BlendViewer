@@ -38,11 +38,11 @@ Rectangle
 
             // StatusLabel.qml
             // - Meshes
-            StatusLabel { icon: "qrc:/qt/qml/BlendViewer/assets/icons/mesh.svg"; value: "0"; label: "Meshes" }
+            StatusLabel { icon: Properties.iconSource + "mesh.svg"; value: "0"; label: "Meshes" }
             // - Vertices
-            StatusLabel { icon: "qrc:/qt/qml/BlendViewer/assets/icons/vertices.svg"; value: "0"; label: "Vertices" }
+            StatusLabel { icon: Properties.iconSource + "vertices.svg"; value: "0"; label: "Vertices" }
             // - Materials
-            StatusLabel { icon: "qrc:/qt/qml/BlendViewer/assets/icons/materials.svg"; value: "0"; label: "Materials" }
+            StatusLabel { icon: Properties.iconSource + "materials.svg"; value: "0"; label: "Materials" }
             // - StatusLabel.qml
         }
         // - Left Group
@@ -66,7 +66,7 @@ Rectangle
             // - Spacer
             StatusLabel { icon: ""; value: "|"; label: "" }
             // - RHI Pipeline
-            StatusLabel { icon: ""; value: "D3D11"; label: "" }
+            StatusLabel { icon: ""; value: Properties.rhi_pipeline; label: "" }
             // - StatusLabel.qml
         }
         // - Right Group
@@ -79,7 +79,7 @@ Rectangle
     {
         id: statusBarTopBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         height: 1
 
         anchors

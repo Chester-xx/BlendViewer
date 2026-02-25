@@ -47,7 +47,7 @@ Rectangle
             // Version Heading
             Text
             {
-                text: qsTr("v1.0.0")
+                text: qsTr(Properties.version)
                 leftPadding: appInfo.width * 1 / 16
                 font.pixelSize: appInfo.height * 1 / 6.7
                 color: Properties.textSecondary
@@ -65,7 +65,7 @@ Rectangle
 
             flat: true
             scale: settingsButton.pressed ? 0.92 : 1.0
-            icon.source: "qrc:/qt/qml/BlendViewer/assets/icons/settings.svg"
+            icon.source: Properties.iconSource + "settings.svg"
             icon.width: appInfo.height * 3 / 8
             icon.height: appInfo.height * 3 / 8
             icon.color: settingsIconColor
@@ -126,7 +126,7 @@ Rectangle
     {
         id: appInfoBottomBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         height: 1
 
         anchors
@@ -143,7 +143,7 @@ Rectangle
     {
         id: appInfoRightBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         width: 1
 
         anchors

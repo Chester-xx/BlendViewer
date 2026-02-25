@@ -71,7 +71,7 @@ Button
             Image
             {
                 id: importIcon
-                source: "qrc:/qt/qml/BlendViewer/assets/icons/import.svg"
+                source: Properties.iconSource + "import.svg"
                 width: importFileButton.height * 7 / 12
                 height: importFileButton.height * 7 / 12
                 sourceSize.width: importFileButton.height * 7 / 12

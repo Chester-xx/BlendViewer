@@ -45,7 +45,7 @@ Rectangle
             {
                 id: cameraSpeedIcon
 
-                source: "qrc:/qt/qml/BlendViewer/assets/icons/camera-speed.svg"
+                source: Properties.iconSource + "camera-speed.svg"
                 width: height
                 height: parent.height
             }
@@ -124,7 +124,7 @@ Rectangle
                     width: cameraSpeedSlider.availableWidth
                     height: 4
                     radius: 2
-                    color: "#2A3B4F"
+                    color: Properties.border
 
                     // Filled Portion
                     Rectangle
@@ -173,7 +173,7 @@ Rectangle
     {
         id: cameraSpeedTopBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         height: 1
 
         anchors
@@ -188,9 +188,9 @@ Rectangle
     // Right Side Border
     Rectangle
     {
-        id: cameraSpeefRightBorder
+        id: cameraSpeedRightBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         width: 1
 
         anchors

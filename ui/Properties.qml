@@ -10,6 +10,8 @@ QtObject
 	readonly property string author: "Chester-xx"
 	readonly property string github: "https://github.com/Chester-xx/BlendViewer/"
 	readonly property string license: "MIT"
+	readonly property string rhi_pipeline: "D3D11"
+	readonly property string iconSource: "qrc:/qt/qml/BlendViewer/assets/icons/"
 
 	readonly property bool fullscreen: false
 	readonly property int minimumWidth: 900
@@ -18,6 +20,8 @@ QtObject
 	readonly property color primaryBackground: "#171D28"
 	readonly property color secondaryBackground: "#111A22"
 	readonly property color tertiaryBackground: "#0D141B"
+
+	readonly property color border: "#2A3B4F"
 
 	readonly property color textPrimary: "#ffffff"
 	readonly property color textSecondary: "#94A3B8"

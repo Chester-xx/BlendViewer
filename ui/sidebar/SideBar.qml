@@ -24,7 +24,7 @@ Rectangle
     {
         id: sideBarRightBorder
 
-        color: "#2A3B4F"
+        color: Properties.border
         width: 1
 
         anchors
