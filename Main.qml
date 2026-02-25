@@ -9,17 +9,16 @@ Window {
     id: mainWindow
 
     visible: true
-    //visibility: Window.FullScreen
-    visibility: Window.Maximized
-
-    color: "#171D28"
-
-    width: Screen.width * 1/2
-    height: Screen.height * 1/2
+    width: Screen.width * 1 / 2
+    height: Screen.height * 1 / 2
     minimumWidth: 900
     minimumHeight: 600
-    
+    color: "#171D28"
     title: qsTr("BlendViewer")
+
+    // Debugging during UI iteration
+    //visibility: Window.FullScreen
+    visibility: Window.Maximized
 
     SideBar
     {
