@@ -25,7 +25,6 @@
   * Qt Quick 3D
   * Qt ShaderTools
 * **IDE:** Visual Studio (Qt VS Tools Extension)
-* **UI Design Inspiration:** Google Stitch
 * **Rendering Backend:** Qt Quick 3D (glTF importer)
 
 ## Project Setup & Information
@@ -42,22 +41,27 @@ BlendViewer/
 │   └── Modules
 │
 ├── ui/
+│   ├── Properties.qml
 │   └── sidebar/
-│       └── SideBar.qml
-│       └── AppInfo.qml
-│       └── ImportFileButton.qml
+│       ├── SideBar.qml
+│       ├── AppInfo.qml
+│       ├── ImportFileButton.qml
 │       └── CameraSpeedController.qml
 │   └── statusbar/
-│       └── StatusBar.qml
+│       ├── StatusBar.qml
+|       └── StatusLabel.qml
 │   └── viewport/
 │       └── ViewPort.qml
 │
 ├── assets/
-│   └── icons/
+│   ├── icons/
 │   └── (test glTF files, icons, app assets, json data)
 │
 ├── build-debug/
 ├── build-release/
+├── release-output/
+|
+├── deploy.bat
 │
 ├── CMakeLists.txt
 ├── CMakePresets.json
