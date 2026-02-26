@@ -88,3 +88,12 @@ install(TARGETS appBlendViewer
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+# Post-build: windeployqt and cleanup (Release only)
+string(TOUPPER "${CMAKE_BUILD_TYPE}" BUILD_TYPE_UPPER)
+if(BUILD_TYPE_UPPER STREQUAL "RELEASE")
+    add_custom_command(TARGET appBlendViewer POST_BUILD
+        COMMAND "${CMAKE_SOURCE_DIR}/deploy.bat"
+        COMMENT "Running windeployqt and cleanup..."
+    )
+endif()

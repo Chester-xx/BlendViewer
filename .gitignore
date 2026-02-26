@@ -1,6 +1,7 @@
 # Build Output paths for Debug and Release
 build-debug/
 build-release/
+release-output/
 
 # Visual Studio specific files
 .vs/
