@@ -85,6 +85,20 @@ Rectangle
             }
             // - Import Label
 
+            // CameraControlsHeader.qml
+            CameraControlsHeader
+            {
+                id: cameraControlsHeader
+            }
+            // - CameraControlsHeader.qml
+
+            // CameraControls.qml
+            CameraControls
+            {
+                id: cameraControls
+            }
+            // - CameraControls.qml
+
         }
         // - Content Layout
     }

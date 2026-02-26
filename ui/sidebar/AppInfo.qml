@@ -61,7 +61,7 @@ Rectangle
         {
             id: settingsButton
 
-            property color settingsIconColor: settingsButton.pressed ? "#4D84F2" : settingsButton.hovered ? Properties.textPrimary : Properties.textSecondary
+            property color settingsIconColor: settingsButton.pressed ? Properties.lightButtonPressed : settingsButton.hovered ? Properties.textPrimary : Properties.textSecondary
 
             flat: true
             scale: settingsButton.pressed ? 0.92 : 1.0
