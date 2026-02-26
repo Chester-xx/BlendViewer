@@ -7,8 +7,12 @@ Rectangle
 {
 	id: cameraControls
 
-	width: parent.width
-	height: sideBar.height * 1 / 3
+	Layout.fillWidth: true
+	Layout.preferredHeight: sideBar.height * 1 / 6
+	Layout.topMargin: sideBar.height * 1 / 100
+	Layout.leftMargin: sideBar.width * 1 / 20
+	Layout.rightMargin: sideBar.width * 1 / 20
+
 	color: Properties.controlBackground
 	radius: 7
 

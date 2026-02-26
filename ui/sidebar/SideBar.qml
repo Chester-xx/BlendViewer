@@ -1,5 +1,6 @@
 ﻿import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls.Basic
 
 import BlendViewer
 
@@ -49,7 +50,13 @@ Rectangle
         id: sideBarContent
         
         clip: true
+        interactive: true
         contentHeight: sideBarColumnLayout.implicitHeight
+
+        ScrollBar.vertical: ScrollBar
+        {
+            policy: ScrollBar.AsNeeded
+        }
 
         anchors
         {
