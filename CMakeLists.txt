@@ -8,6 +8,7 @@ set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 # Main executable
 qt_add_executable(appBlendViewer
     main.cpp
+    assets/blendviewer.rc
 )
 
 # Singleton declaration
@@ -41,9 +42,13 @@ qt_add_qml_module(BlendViewer_SideBar
         ui/sidebar/AppInfo.qml
         ui/sidebar/ImportFileButton.qml
         ui/sidebar/CameraSpeedController.qml
+
         ui/sidebar/cameracontrols/CameraControlsHeader.qml
         ui/sidebar/cameracontrols/CameraControls.qml
         ui/sidebar/cameracontrols/ControlObject.qml
+
+        ui/sidebar/quickviews/QuickViewsHeader.qml
+        ui/sidebar/quickviews/QuickViews.qml
 )
 
 # Sub-module: StatusBar

@@ -5,6 +5,7 @@ release-output/
 
 # Visual Studio specific files
 .vs/
+*blendviewer.aps
 
 # User Specific files
 CMakeUserPresets.json

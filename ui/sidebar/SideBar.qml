@@ -106,6 +106,13 @@ Rectangle
             }
             // - CameraControls.qml
 
+            // QuickViewsHeader.qml
+            QuickViewsHeader
+            {
+                id: quickViews
+            }
+            // - QuickViewsHeader.qml
+
         }
         // - Content Layout
     }

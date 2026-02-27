@@ -119,10 +119,12 @@ Rectangle
                 // Track
                 background: Rectangle
                 {
+                    id: cameraSpeedSliderTrack
+
                     x: cameraSpeedSlider.leftPadding
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
                     width: cameraSpeedSlider.availableWidth
-                    height: 4
+                    height: cameraSpeedSlider.height * 1 / 8
                     radius: 2
                     color: Properties.border
 
@@ -132,7 +134,7 @@ Rectangle
                         width: cameraSpeedSlider.visualPosition * parent.width
                         height: parent.height
                         radius: 2
-                        color: Properties.textSecondary
+                        color: Properties.button
                     }
                     // - Filled Portion
                 }
@@ -143,9 +145,9 @@ Rectangle
                 {
                     x: cameraSpeedSlider.leftPadding + cameraSpeedSlider.visualPosition * (cameraSpeedSlider.availableWidth - width)
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
-                    width: 16
-                    height: 16
-                    radius: 8
+                    width: cameraSpeedSliderTrack.height * 4
+                    height: cameraSpeedSliderTrack.height * 4
+                    radius: 20
                     color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
                     border.color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
                     border.width: 1
