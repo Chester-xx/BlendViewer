@@ -16,7 +16,7 @@ QtObject
 	// - App Specifications
 
 	// Window Specifications
-		readonly property bool fullscreen: true
+		readonly property bool fullscreen: false
 		readonly property int minimumWidth: 900
 		readonly property int minimumHeight: 600
 	// - Window Specifications
