@@ -30,6 +30,11 @@ qt_add_qml_module(appBlendViewer
         assets/icons/mesh.svg
         assets/icons/vertices.svg
         assets/icons/materials.svg
+        assets/icons/view-top.svg
+        assets/icons/view-bottom.svg
+        assets/icons/view-left.svg
+        assets/icons/view-right.svg
+        assets/icons/view-perspective.svg
 )
 
 # Sub-module: Sidebar

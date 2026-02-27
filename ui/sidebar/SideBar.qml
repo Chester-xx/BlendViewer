@@ -109,10 +109,16 @@ Rectangle
             // QuickViewsHeader.qml
             QuickViewsHeader
             {
-                id: quickViews
+                id: quickViewsHeader
             }
             // - QuickViewsHeader.qml
 
+            // QuickViews.qml
+            QuickViews
+            {
+                id: quickViews
+            }
+            // - QuickViews.qml
         }
         // - Content Layout
     }
