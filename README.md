@@ -30,7 +30,6 @@
 ## Project Setup & Information
 
 ### Planned Repository Structure
-
 ```
 BlendViewer/
 │
@@ -38,36 +37,54 @@ BlendViewer/
 ├── Main.qml
 │
 ├── src/
-│   └── Modules
+│   ├── controllers/
+│   ├── models/
+│   └── utils/
 │
 ├── ui/
 │   ├── Properties.qml
-│   └── sidebar/
-│       ├── SideBar.qml
-│       ├── AppInfo.qml
-│       ├── ImportFileButton.qml
-│       └── CameraSpeedController.qml
-│   └── statusbar/
-│       ├── StatusBar.qml
-|       └── StatusLabel.qml
+│   │
+│   ├── sidebar/
+│   │   ├── SideBar.qml
+│   │   │
+│   │   ├── AppInfo.qml
+│   │   ├── ImportFileButton.qml
+│   │   ├── CameraSpeedController.qml
+│   │   │
+│   │   ├── cameracontrols/
+│   │   │   ├── CameraControls.qml
+│   │   │   │
+│   │   │   ├── CameraControlsHeader.qml
+│   │   │   └── ControlObject.qml
+│   │   └── quickviews/
+│   │       ├── QuickViews.qml
+│   │       │
+│   │       ├── QuickViewsHeader.qml
+│   │       └── ViewObject.qml
+│   │
+│   ├── statusbar/
+│   │   ├── StatusBar.qml
+│   │   │
+│   │   └── StatusLabel.qml
+│   │
 │   └── viewport/
 │       └── ViewPort.qml
 │
 ├── assets/
-│   ├── icons/
-│   └── (test glTF files, icons, app assets, json data)
+│   ├── app.rc
+│   └── icons/
 │
 ├── build-debug/
 ├── build-release/
 ├── release-output/
-|
+│
 ├── deploy.bat
 │
 ├── CMakeLists.txt
 ├── CMakePresets.json
 │
 ├── README.md
-└── LICENCE
+└── LICENSE
 ```
 
 1. Qt Quick Application initialization via Visual Studio

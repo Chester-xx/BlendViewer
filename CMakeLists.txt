@@ -49,6 +49,7 @@ qt_add_qml_module(BlendViewer_SideBar
 
         ui/sidebar/quickviews/QuickViewsHeader.qml
         ui/sidebar/quickviews/QuickViews.qml
+        ui/sidebar/quickviews/ViewObject.qml
 )
 
 # Sub-module: StatusBar
