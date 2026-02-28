@@ -56,11 +56,18 @@ BlendViewer/
 │   │   │   │
 │   │   │   ├── CameraControlsHeader.qml
 │   │   │   └── ControlObject.qml
-│   │   └── quickviews/
-│   │       ├── QuickViews.qml
+│   │   │
+│   │   ├── quickviews/
+│   │   │   ├── QuickViews.qml
+│   │   │   │
+│   │   │   ├── QuickViewsHeader.qml
+│   │   │   └── ViewObject.qml
+│   │   │
+│   │   └── environments/
+│   │       ├── Environments.qml
 │   │       │
-│   │       ├── QuickViewsHeader.qml
-│   │       └── ViewObject.qml
+│   │       ├── EnvironmentsHeader.qml
+│   │       └── EnvironmentObject.qml
 │   │
 │   ├── statusbar/
 │   │   ├── StatusBar.qml
