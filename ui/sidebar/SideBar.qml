@@ -119,6 +119,20 @@ Rectangle
                 id: quickViews
             }
             // - QuickViews.qml
+
+            // EnvironmentsHeader.qml
+            EnvironmentsHeader
+            {
+                id: environmentsHeader
+            }
+            // - EnvironmentsHeader.qml
+
+            // Environments.qml
+            Environments
+            {
+                id: environments
+            }
+            // - Environments.qml
         }
         // - Content Layout
     }
