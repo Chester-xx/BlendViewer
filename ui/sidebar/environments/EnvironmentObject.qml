@@ -102,7 +102,7 @@ Rectangle
         // Text & Bar Column
         Column
         {
-            spacing: parent.height * 1 / 25
+            spacing: parent.height * 1 / 20
 
             anchors
             {
