@@ -1,6 +1,8 @@
 # BlendViewer
 
-`Under Development`
+
+<!-- ![Status](https://img.shields.io/badge/status-prerelease-blue?logo=github) -->
+![Status](https://img.shields.io/badge/-Under%20Development%20|%20UI%20Integration-orange?logo=github)
 
 ---
 
