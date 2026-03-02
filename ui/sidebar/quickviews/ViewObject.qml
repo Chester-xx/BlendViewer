@@ -10,8 +10,8 @@ Rectangle
 {
 	id: viewObject
 
-	property string label: "View"
-	property string icon: ""
+	property string label
+	property string icon
 	signal selected()
 
 	Layout.fillWidth: true

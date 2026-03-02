@@ -26,29 +26,32 @@ Rectangle
         width: parent.width
         spacing: sideBar.height * 1 / 100
 
-        // Studio
-        EnvironmentObject
-        {
-            label: qsTr("Studio")
-        }
+        // EnvironmentObject.qml
+            // Studio
+            EnvironmentObject
+            {
+                label: qsTr("Studio")
+                icon: "studio.svg"
+            }
 
-        // Sunset
-        EnvironmentObject
-        {
-            label: qsTr("Sunset")
-        }
+            // Sunset
+            EnvironmentObject
+            {
+                label: qsTr("Sunset")
+            }
 
-        // Night
-        EnvironmentObject
-        {
-            label: qsTr("Night")
-        }
+            // Night
+            EnvironmentObject
+            {
+                label: qsTr("Night")
+            }
 
-        // Overcast
-        EnvironmentObject
-        {
-            label: qsTr("Overcast")
-        }
+            // Overcast
+            EnvironmentObject
+            {
+                label: qsTr("Overcast")
+            }
+        // - EnvironmentObject.qml
     }
     // - Environment Column
 }

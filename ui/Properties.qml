@@ -13,6 +13,7 @@ QtObject
 		readonly property string license: "MIT"
 		readonly property string rhi_pipeline: "D3D11"
 		readonly property string iconSource: "qrc:/qt/qml/BlendViewer/assets/icons/"
+		readonly property string iconSourceEnvironment: iconSource + "environments/"
 	// - App Specifications
 
 	// Window Specifications
@@ -29,6 +30,7 @@ QtObject
 		readonly property color border: "#2A3B4F"
 	
 		readonly property color controlBackground: "#1A2634"
+		readonly property color controlEnabled: "#21C35D"
 		// - Background Colors
 
 	// Text Colors
