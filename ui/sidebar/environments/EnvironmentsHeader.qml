@@ -43,6 +43,7 @@ RowLayout
 		IconImage
 		{
 			id: environmentActive
+
 			source: Properties.iconSource + "dot.svg"
 			width: environmentActiveText.font.pixelSize * 3 / 4
 			height: width
@@ -54,6 +55,34 @@ RowLayout
 
 			Layout.rightMargin: width * 1 / 3
 			Layout.alignment: Qt.AlignVCenter
+
+			// Inactive Environment color effect
+			SequentialAnimation on color
+			{
+				running: true
+				loops: Animation.Infinite
+
+				// From
+				ColorAnimation
+				{
+					from: Properties.button
+					to: Properties.buttonPressed
+					duration: 1000
+					easing.type: Easing.InOutSine
+				}
+				// - From
+
+				// To
+				ColorAnimation
+				{
+					from: Properties.buttonPressed
+					to: Properties.button
+					duration: 1000
+					easing.type: Easing.InOutSine
+				}
+				// - To
+			}
+			// - Inactive Environment color effect
 		}
 		// - Environment Active Notifier
 
@@ -61,6 +90,7 @@ RowLayout
 		Text
 		{
 			id: environmentActiveText
+
 			text: environments.activeEnv
 			font.pixelSize: sideBar.height * 1 / 120
 			color: Properties.textSecondary

@@ -48,7 +48,7 @@ Rectangle
 		// Perspective
 		ViewObject
 		{
-			label: qsTr("Persp")
+			label: qsTr("Perspective")
 			icon: "view-perspective.svg"
 			onSelected: {  }
 		}
