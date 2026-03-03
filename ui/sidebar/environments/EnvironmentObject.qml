@@ -60,7 +60,7 @@ Rectangle
         onClicked:
         {
             environmentObject.selected()
-            environmentObject.loadValue += 10
+            environmentObject.loadValue += 100 // Test Debug
         }
     }
     // - Mouse Area
@@ -73,128 +73,121 @@ Rectangle
         timeout: 3000
     }
 
-    // Content
-    Row
-    {
-        spacing: parent.height * 1 / 6
+// Content
+	Row
+	{
+		spacing: parent.height * 1 / 6
+		
+		anchors
+		{
+			fill: parent
+			margins: parent.height * 1 / 8
+		}
 
-        anchors
-        {
-            fill: parent
-            margins: parent.height * 1 / 7
-        }
+		// Thumbnail Icon
+		IconImage
+		{
+			id: environmentIcon
 
-        // Thumbnail Icon
-        IconImage
-        {
-            id: environmentIcon
+			source: Properties.iconSourceEnvironment + environmentObject.icon
+			width: parent.height
+			height: parent.height
+			sourceSize.width: parent.height
+			sourceSize.height: parent.height
+			fillMode: Image.PreserveAspectFit
+			mipmap: true
+		}
+		// - Thumbnail Icon
+		
+		// Text & Bar Column
+		Column
+		{
+			width: parent.width - environmentIcon.width - (parent.spacing * 3 / 2)
+			height: implicitHeight
+			spacing: height * 1 / 8
 
-            source: Properties.iconSourceEnvironment + environmentObject.icon
-            width: parent.height
-            height: parent.height
-            sourceSize.width: parent.height
-            sourceSize.height: parent.height
-            fillMode: Image.PreserveAspectFit
-            mipmap: true
-        }
-        // - Thumbnail Icon
+			anchors.verticalCenter: parent.verticalCenter
+			
+			// Label
+			Text
+			{
+				text: environmentObject.label
+				width: parent.width
+				font.pixelSize: sideBar.height * 1 / 100
+				color: mouseArea.containsMouse || loadingBar.hovered ? Properties.textPrimary : Properties.textSecondary
+			
+				Behavior on color
+				{
+					ColorAnimation
+					{
+						duration: 150
+						easing.type: Easing.InOutQuad
+					}
+				}
+			}
+			// - Label
 
-        // Text & Bar Column
-        Column
-        {
-            spacing: parent.height * 1 / 20
+			// Loading Bar
+			Slider
+			{
+				id: loadingBar
 
-            anchors
-            {
-                left: environmentIcon.right
-                right: parent.right
-                top: parent.top
-                bottom: parent.bottom
-                leftMargin: parent.anchors.margins
-                topMargin: this.height * 1 / 4
-                bottomMargin: this.height * 1 / 4
-            }
+				from: 0
+				to: 100
+				value: environmentObject.loadValue
+				width: parent.width
+				height: parent.height * 1 / 5
+				enabled: false
+				
+				Behavior on value
+				{
+					NumberAnimation
+					{
+						duration: 600
+						easing.type: Easing.InOutCubic
+					}
+				}
+				
+				// Track
+				background: Rectangle
+				{
+					width: parent.width
+					height: parent.height
+					radius: 10
+					color: Properties.border
 
-            // Label
-            Text
-            {
-                text: environmentObject.label
-                font.pixelSize: sideBar.height * 1 / 100
-                color: mouseArea.containsMouse || loadingBar.hovered ? Properties.textPrimary : Properties.textSecondary
+					// Fill Portion
+					Rectangle
+					{
+						width: loadingBar.visualPosition * parent.width
+						height: parent.height
+						radius: 10
+						color: loadingBar.value < 100 ? Properties.button : Properties.controlEnabled
 
-                Behavior on color
-                {
-                    ColorAnimation 
-                    {
-                        duration: 150
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-            }
-            // - Label
+						Behavior on color
+						{
+							ColorAnimation
+							{
+								duration: 300
+								easing.type: Easing.InOutQuad
+							}
+						}
+					}
+					// - Fill Portion
+				}
+				// - Track
 
-            // Loading Bar
-            Slider
-            {
-                id: loadingBar
-
-                from: 0
-                to: 100
-                value: environmentObject.loadValue
-                width: parent.width
-                height: parent.height * 3 / 16
-                enabled: false
-
-                Behavior on value
-                {
-                    NumberAnimation
-                    {
-                        duration: 600
-                        easing.type: Easing.InOutCubic
-                    }
-                }
-
-                // Track
-                background: Rectangle
-                {
-
-                    width: parent.width
-                    height: parent.height
-                    radius: 10
-                    color: Properties.border
-
-                    // Filled Portion
-                    Rectangle
-                    {
-                        width: loadingBar.visualPosition * parent.width
-                        height: parent.height
-                        radius: 10
-                        color: loadingBar.value < 100 ? Properties.button : Properties.controlEnabled
-
-                        Behavior on color
-                        {
-                            ColorAnimation 
-                            {
-                                duration: 300
-                                easing.type: Easing.InOutQuad
-                            }
-                        }
-                    }
-                    // - Filled Portion
-                }
-                // - Track
-
-                // Disabled Handle
-                handle: Item
-                {
-                
-                }
-                // - Disabled Handle
-            }
-            // - Loading Bar
-        }
-        // - Text & Bar Column
-    }
-    // - Content
+				// Disable Handle
+				handle: Item 
+				{
+				
+				}
+				// - Disable Handle
+			}
+			// - Loading Bar
+		}
+		// - Text & Bar Column
+	}
+	// - Content
 }
 // - Environment Object

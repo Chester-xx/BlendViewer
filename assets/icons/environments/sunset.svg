@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<defs>
+		<linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" stop-color="#B80B2A" />
+			<stop offset="50%" stop-color="#C76000" />
+			<stop offset="100%" stop-color="#FCC103" />
+		</linearGradient>
+		<clipPath id="seaClip">
+			<rect x="0" y="0" width="24" height="17" rx="3"/>
+		</clipPath>
+		<clipPath id="bounds">
+			<rect width="24" height="24" rx="3"/>
+		</clipPath>
+	</defs>
+
+	<rect width="24" height="24" rx="3" fill="url(#sunsetGrad)" />
+
+	<g clip-path="url(#bounds)">
+		<!-- Water reflection shimmer -->
+		<line x1="4"  y1="19" x2="11" y2="19" stroke="#c45c1a" stroke-width="0.5" stroke-linecap="round" opacity="0.5"/>
+		<line x1="13" y1="20" x2="16" y2="20" stroke="#c45c1a" stroke-width="0.5" stroke-linecap="round" opacity="0.4"/>
+		<!-- Sun half-circle clipped above sea line -->
+		<circle cx="12" cy="17" r="4" fill="#f5a623" opacity="0.95" clip-path="url(#seaClip)"/>
+	</g>
+</svg>

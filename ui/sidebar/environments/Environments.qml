@@ -38,18 +38,21 @@ Rectangle
             EnvironmentObject
             {
                 label: qsTr("Sunset")
+                icon: "sunset.svg"
             }
 
             // Night
             EnvironmentObject
             {
                 label: qsTr("Night")
+                icon: "night.svg"
             }
 
             // Overcast
             EnvironmentObject
             {
                 label: qsTr("Overcast")
+                icon: "overcast.svg"
             }
         // - EnvironmentObject.qml
     }

@@ -38,6 +38,9 @@ qt_add_qml_module(appBlendViewer
         assets/icons/dot.svg
 
         assets/icons/environments/studio.svg
+        assets/icons/environments/sunset.svg
+        assets/icons/environments/night.svg
+        assets/icons/environments/overcast.svg
 )
 
 # Sub-module: Sidebar
