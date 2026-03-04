@@ -1,12 +1,27 @@
-﻿import QtQuick 2.3
+﻿import QtQuick
 
-Rectangle {
-    width: 200
-    height: 100
-    color: "red"
+import BlendViewer
 
-    Text {
-        anchors.centerIn: parent
-        text: "Hello, World!"
-    }
+// Viewport
+Item
+{
+	id: viewPort
+	
+	clip: true
+	
+	anchors
+	{
+		top: parent.top
+		bottom: statusBar.top
+		left: sideBar.right
+		right: parent.right
+	}
+
+	// ViewPortPlaceHolder.qml
+	ViewPortPlaceHolder
+	{
+		id: viewPortPlaceHolder
+	}
+	// - ViewPortPlaceHolder.qml
 }
+// Viewport

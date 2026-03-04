@@ -1,7 +1,7 @@
 ﻿cmake_minimum_required(VERSION 3.16)
 project(BlendViewer VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-find_package(Qt6 REQUIRED COMPONENTS Quick Quick3D ShaderTools Svg)
+find_package(Qt6 REQUIRED COMPONENTS Quick Quick3D Qml ShaderTools Svg)
 qt_standard_project_setup(REQUIRES 6.8)
 set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
@@ -70,6 +70,9 @@ qt_add_qml_module(BlendViewer_SideBar
         ui/sidebar/filemanager/FileManagerHeader.qml
         ui/sidebar/filemanager/FileManager.qml
         ui/sidebar/filemanager/FileObject.qml
+
+        ui/viewport/ViewPortPlaceHolder.qml
+        ui/viewport/ViewPort.qml
 )
 
 # Sub-module: StatusBar
@@ -96,6 +99,7 @@ target_link_libraries(appBlendViewer
     PRIVATE
     Qt6::Quick
     Qt6::Quick3D
+    Qt6::Qml
     Qt6::ShaderTools
     Qt6::Svg
     BlendViewer_SideBar

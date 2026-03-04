@@ -20,14 +20,24 @@ Window {
     // Debugging during UI iteration
     visibility: Properties.fullscreen ? Window.FullScreen : Window.Maximized
 
+    // SideBar.qml
     SideBar
     {
         id: sideBar
     }
+    // - SideBar.qml
 
+    // StatusBar.qml
     StatusBar
     {
         id: statusBar
     }
+    // - StatusBar.qml
 
+    // ViewPort.qml
+    ViewPort
+    {
+        id: viewPort
+    }
+    // - ViewPort.qml
 }
