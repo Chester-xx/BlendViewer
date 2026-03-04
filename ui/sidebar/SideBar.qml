@@ -133,6 +133,20 @@ Rectangle
                 id: environments
             }
             // - Environments.qml
+
+            // FileManagerHeader.qml
+            FileManagerHeader
+            {
+                id: fileManagerHeader
+            }
+            // - FileManagerHeader.qml
+
+            // FileManager.qml
+            FileManager
+            {
+                id: fileManager
+            }
+            // - FileManager.qml
         }
         // - Content Layout
     }

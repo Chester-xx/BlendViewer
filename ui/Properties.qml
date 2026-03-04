@@ -12,8 +12,10 @@ QtObject
 		readonly property string github: "https://github.com/Chester-xx/BlendViewer/"
 		readonly property string license: "MIT"
 		readonly property string rhi_pipeline: "D3D11"
-		readonly property string iconSource: "qrc:/qt/qml/BlendViewer/assets/icons/"
+		readonly property string rootSource: "qrc:/qt/qml/BlendViewer/"
+		readonly property string iconSource: rootSource + "assets/icons/"
 		readonly property string iconSourceEnvironment: iconSource + "environments/"
+		readonly property string modelSource: rootSource + "assets/models/"
 	// - App Specifications
 
 	// Window Specifications
