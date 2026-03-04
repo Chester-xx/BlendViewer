@@ -11,6 +11,7 @@ Rectangle
 
     Layout.fillWidth: true
     Layout.topMargin: sideBar.height * 1 / 100
+    Layout.bottomMargin: sideBar.height * 1 / 100
     Layout.leftMargin: sideBar.width * 1 / 20
     Layout.rightMargin: sideBar.width * 1 / 20
     Layout.preferredHeight: fileColumn.implicitHeight
