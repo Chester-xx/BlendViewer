@@ -42,6 +42,7 @@ Rectangle
     MouseArea
     {
         id: mouseArea
+
         anchors.fill: parent
         hoverEnabled: true
         cursorShape: Qt.PointingHandCursor
@@ -73,21 +74,15 @@ Rectangle
         {
             id: fileIcon
 
-            source: Properties.iconSource + "mesh.svg"
+            source: Properties.iconSource + "model-file.svg"
             width: parent.height
             height: parent.height
             sourceSize.width: parent.height
             sourceSize.height: parent.height
             fillMode: Image.PreserveAspectFit
             mipmap: true
-            color: mouseArea.containsMouse ? Properties.button : Properties.border
 
             anchors.verticalCenter: parent.verticalCenter
-
-            Behavior on color
-            {
-                ColorAnimation { duration: 150; easing.type: Easing.InOutQuad }
-            }
         }
         // - File Icon
 

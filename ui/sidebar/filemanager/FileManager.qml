@@ -66,22 +66,10 @@ Rectangle
                 onSelected:
                 {
                     // Backend load logic will go here
-                    console.log("Selected:", filePath)
                 }
             }
         }
     }
     // - File Object Column
-
-Component.onCompleted: 
-{
-    console.log("Folder:", folderModel.folder)
-    console.log("Count:", folderModel.count)
-    console.log("Status:", folderModel.status)
-    console.log("Exe path:", Qt.application.arguments[0])
-    console.log("Looking in:", folderModel.folder)
-    console.log("Exe dir:", Qt.applicationDirPath)
-}
-
 }
 // - File Manager
