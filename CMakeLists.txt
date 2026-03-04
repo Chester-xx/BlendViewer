@@ -117,6 +117,19 @@ install(TARGETS appBlendViewer
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+# Ensure assets/models/ exists in source tree
+file(MAKE_DIRECTORY "${CMAKE_SOURCE_DIR}/assets/models")
+
+# Ensure assets/models/ exists in build output and sync contents
+add_custom_command(TARGET appBlendViewer POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory
+        "$<TARGET_FILE_DIR:appBlendViewer>/assets/models"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/assets/models"
+        "$<TARGET_FILE_DIR:appBlendViewer>/assets/models"
+    COMMENT "Syncing assets/models/ to build output"
+)
+
 # Post-build: windeployqt and cleanup (Release only)
 string(TOUPPER "${CMAKE_BUILD_TYPE}" BUILD_TYPE_UPPER)
 if(BUILD_TYPE_UPPER STREQUAL "RELEASE")
