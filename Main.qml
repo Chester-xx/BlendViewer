@@ -4,6 +4,7 @@ import QtQuick.Window
 import BlendViewer
 import BlendViewer.SideBar
 import BlendViewer.StatusBar
+import BlendViewer.Viewport
 
 Window {
 
