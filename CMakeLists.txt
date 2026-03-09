@@ -70,9 +70,6 @@ qt_add_qml_module(BlendViewer_SideBar
         ui/sidebar/filemanager/FileManagerHeader.qml
         ui/sidebar/filemanager/FileManager.qml
         ui/sidebar/filemanager/FileObject.qml
-
-        ui/viewport/ViewPortPlaceHolder.qml
-        ui/viewport/ViewPort.qml
 )
 
 # Sub-module: StatusBar
@@ -91,7 +88,8 @@ qt_add_library(BlendViewer_Viewport)
 qt_add_qml_module(BlendViewer_Viewport
     URI BlendViewer.Viewport
     QML_FILES
-        ui/viewport/Viewport.qml
+        ui/viewport/ViewPort.qml
+        ui/viewport/ViewPortPlaceHolder.qml
 )
 
 # Link all modules into the main target

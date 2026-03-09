@@ -6,11 +6,19 @@
 
 ---
 
-- BlendViewer is a lightweight **glTF (`.gltf` / `.glb`) rendering and inspection application** under development. 
+- **BlendViewer** is a lightweight **glTF (`.gltf` / `.glb`) rendering and inspection application** under development. 
 - Being built with the **Qt Framework (C++ & QML)**.
 - The project focuses on providing an intuitive UI for loading, viewing, and manipulating 3D models using **Qt Quick 3D**.
 
 ### [Live concept & design reference](https://chester-xx.github.io/blendviewer/live-reference/)
+
+---
+
+### Current Issues
+
+- **Resizing behavior** - Window Resizing causes performance issues related to layout bindings and dynamic objects being linked to both anchoring and layout bindinds.
+- **`assets/models` Storage** - Currently storing models in the repository for testing. Deployment requires appdata storage.
+- **Viewport Placeholder** - Placeholder  object `Canvas` & `Rectangle` has been depricated for the use of gradients, deciding on implementation between svg or fragment shader based on performance.
 
 ---
 
@@ -27,7 +35,8 @@
   * Qt Quick 3D
   * Qt ShaderTools
 * **IDE:** Visual Studio (Qt VS Tools Extension)
-* **Rendering Backend:** Qt Quick 3D (glTF importer)
+* **Rendering Backend:** Qt Quick 3D (glTF importer) & Potentially implementation with Vulkan
+* **CMake for build system**
 
 ## Project Setup & Information
 
@@ -77,7 +86,9 @@ BlendViewer/
 │   │   └── StatusLabel.qml
 │   │
 │   └── viewport/
-│       └── ViewPort.qml
+│       ├── ViewPort.qml
+│       │
+│       └── ViewPortPlaceHolder.qml
 │
 ├── assets/
 │   ├── app.rc
@@ -231,4 +242,4 @@ The UI design is inspired by 3D viewers such as:
 
 ## License
 
-![MIT Licence](https://github.com/Chester-xx/BlendViewer/blob/main/LICENSE)
+[MIT Licence](https://github.com/Chester-xx/BlendViewer/blob/main/LICENSE)

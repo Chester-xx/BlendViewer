@@ -29,7 +29,8 @@ QtObject
 		readonly property color secondaryBackground: "#111A22"
 		readonly property color tertiaryBackground: "#0D141B"
 
-		readonly property color viewPortDarkColor: "#0D141B"
+		readonly property color viewPortDarkColor: "#0A0E15"
+		readonly property color viewPortLightColor: "#1A202C"
 
 		readonly property color border: "#2A3B4F"
 	
