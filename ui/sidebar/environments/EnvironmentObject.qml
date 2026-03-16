@@ -113,7 +113,7 @@ Rectangle
 			{
 				text: environmentObject.label
 				width: parent.width
-				font.pixelSize: sideBar.height * 1 / 100
+				font.pixelSize: Properties.fontM
 				color: mouseArea.containsMouse || loadingBar.hovered ? Properties.textPrimary : Properties.textSecondary
 			
 				Behavior on color

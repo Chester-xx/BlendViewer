@@ -105,7 +105,7 @@ Rectangle
 		Text
 		{
 			text: viewObject.label
-			font.pixelSize: viewObject.width * 1 / 7
+			font.pixelSize: Properties.fontM
 			color: mouseArea.pressed ? Properties.buttonHover : mouseArea.containsMouse ? Properties.button : Properties.textPrimary
 			anchors.horizontalCenter: parent.horizontalCenter
 

@@ -35,7 +35,7 @@ Row
 	Text
 	{
 		text: isFPS === true ? label + " " + value : (label !== "" ? value + " " + label : value)
-		font.pixelSize: statusBar.height * 4 / 10
+		font.pixelSize: Properties.fontS
 		color: Properties.textSecondary
 		elide: Text.ElideRight
 

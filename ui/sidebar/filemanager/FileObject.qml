@@ -98,7 +98,7 @@ Rectangle
             {
                 text: fileObject.fileName
                 width: parent.width
-                font.pixelSize: sideBar.height * 1 / 100
+                font.pixelSize: Properties.fontM
                 color: mouseArea.containsMouse ? Properties.textPrimary : Properties.textSecondary
                 elide: Text.ElideMiddle
 
@@ -114,7 +114,7 @@ Rectangle
             {
                 text: fileObject.fileSize
                 width: parent.width
-                font.pixelSize: sideBar.height * 1 / 120
+                font.pixelSize: Properties.fontS
                 color: Properties.border
                 elide: Text.ElideRight
             }

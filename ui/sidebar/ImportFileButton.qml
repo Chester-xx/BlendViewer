@@ -86,7 +86,7 @@ Button
             Text
             {
                 text: qsTr("Import glTF Model")
-                font.pixelSize: importFileButton.height * 1 / 3
+                font.pixelSize: Properties.fontL
                 font.bold: true
                 color: Properties.textPrimary
                 anchors.verticalCenter: parent.verticalCenter

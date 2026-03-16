@@ -35,7 +35,7 @@ Rectangle
 		Text
 		{
 			text: controlObject.label
-			font.pixelSize: sideBar.height * 1 / 100
+			font.pixelSize: Properties.fontM
 			color: Properties.textPrimary
 			Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
 		}
@@ -92,7 +92,7 @@ Rectangle
 					anchors.verticalCenter: parent.verticalCenter
 					text: controlObject.value.toFixed(1)
 					color: Properties.textPrimary
-					font.pixelSize: sideBar.height * 1 / 120
+					font.pixelSize: Properties.fontS
 					horizontalAlignment: Text.AlignHCenter
 					clip: true
 
@@ -142,7 +142,7 @@ Rectangle
 					anchors.verticalCenter: parent.verticalCenter
 					text: controlObject.unit
 					color: Properties.textPrimary
-					font.pixelSize: sideBar.height * 1 / 120
+					font.pixelSize: Properties.fontS
 				}
 				// - Unit Label
 			}

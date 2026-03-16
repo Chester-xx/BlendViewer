@@ -27,11 +27,11 @@ QtObject
 	// - Window Specifications
 
 	// Font Scales
-		readonly property real fontS: scale * 9
-		readonly property real fontM: scale * 11
-		readonly property real fontL: scale * 13
+		readonly property real fontS: scale * 7
+		readonly property real fontM: scale * 9
+		readonly property real fontL: scale * 10
 		readonly property real fontTitle: scale * 12
-		readonly property real fontSub: scale * 7
+		readonly property real fontSub: scale * 7.5
 	// - Font Scales
 
 	// Spacing & Margin Scales
@@ -42,8 +42,8 @@ QtObject
 	// - Spacing & Margin Scales
 
 	// Border Scales
-		readonly property real radiusS: 4.0
-		readonly property real radiusM: 7.0   
+		readonly property real radiusS: 4
+		readonly property real radiusM: 7   
 	// - Border Scales
 
 	// Background Colors | Main | Border | Controls

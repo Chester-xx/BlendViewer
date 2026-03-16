@@ -16,7 +16,7 @@ RowLayout
     Text
     {
         text: qsTr("QUICK VIEWS")
-        font.pixelSize: sideBar.height * 1 / 100
+        font.pixelSize: Properties.fontL
         font.bold: true
         color: Properties.textPrimary
         Layout.alignment: Qt.AlignLeft

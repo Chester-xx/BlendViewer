@@ -34,7 +34,7 @@ Rectangle
     {
         visible: folderModel.count === 0
         text: qsTr("No models found")
-        font.pixelSize: sideBar.height * 1 / 110
+        font.pixelSize: Properties.fontM
         color: Properties.border
         anchors.horizontalCenter: parent.horizontalCenter
     }

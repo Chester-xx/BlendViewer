@@ -19,7 +19,7 @@ RowLayout
     Text
     {
         text: qsTr("ENVIRONMENT")
-        font.pixelSize: sideBar.height * 1 / 100
+        font.pixelSize: Properties.fontL
         font.bold: true
         color: Properties.textPrimary
         Layout.alignment: Qt.AlignLeft
@@ -92,7 +92,7 @@ RowLayout
 			id: environmentActiveText
 
 			text: environments.activeEnv
-			font.pixelSize: sideBar.height * 1 / 120
+			font.pixelSize: Properties.fontS
 			color: Properties.textSecondary
 
 			Layout.alignment: Qt.AlignVCenter

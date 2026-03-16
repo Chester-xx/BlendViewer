@@ -16,7 +16,7 @@ RowLayout
     Text
     {
         text: qsTr("CAMERA CONTROLS")
-        font.pixelSize: sideBar.height * 1 / 100
+        font.pixelSize: Properties.fontL
         font.bold: true
         color: Properties.textPrimary
         Layout.alignment: Qt.AlignLeft
@@ -38,7 +38,7 @@ RowLayout
         property bool hovered: false
 
         text: qsTr("Reset")
-        font.pixelSize: sideBar.height * 1 / 100
+        font.pixelSize: Properties.fontM
         color: resetMouseArea.pressed ? Properties.lightButtonPressed : hovered ? Properties.lightButtonHover : Properties.lightButton
         scale: resetMouseArea.pressed ? 0.92 : 1.0
         Layout.alignment: Qt.AlignRight

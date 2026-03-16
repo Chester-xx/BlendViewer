@@ -85,7 +85,7 @@ Rectangle
             Text
             {
                 text: qsTr("Drag & Drop .glTF or .glb Files")
-                font.pixelSize: sideBar.height * 1 / 110
+                font.pixelSize: Properties.fontSub
                 topPadding: 10
                 color: Properties.textSecondary
                 Layout.alignment: Qt.AlignHCenter

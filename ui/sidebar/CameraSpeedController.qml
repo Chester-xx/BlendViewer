@@ -46,8 +46,8 @@ Rectangle
                 id: cameraSpeedIcon
 
                 source: Properties.iconSource + "camera-speed.svg"
-                width: height
-                height: parent.height
+                width: Properties.fontM * 1.5
+                height: width
             }
             // - Icon
 
@@ -59,7 +59,7 @@ Rectangle
                 anchors.verticalCenter: parent.verticalCenter
                 text: qsTr("Camera Speed")
                 color: Properties.textSecondary
-                font.pixelSize: parent.height * 6 / 10
+                font.pixelSize: Properties.fontM
                 leftPadding: 3
             }
             // - Text
@@ -82,7 +82,7 @@ Rectangle
                 anchors.verticalCenter: parent.verticalCenter
                 text: cameraSpeedSlider.value.toFixed(1) + "x"
                 color: Properties.textSecondary
-                font.pixelSize: parent.height * 6 / 10
+                font.pixelSize: Properties.fontM
             }
             // - Speed Value
         }
