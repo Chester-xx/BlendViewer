@@ -43,7 +43,8 @@ QtObject
 
 	// Border Scales
 		readonly property real radiusS: 4
-		readonly property real radiusM: 7   
+		readonly property real radiusM: 7  
+		readonly property real radiusL: 100
 	// - Border Scales
 
 	// Background Colors | Main | Border | Controls

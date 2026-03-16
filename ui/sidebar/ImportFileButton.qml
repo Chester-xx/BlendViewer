@@ -40,7 +40,7 @@ Button
     background: Rectangle
     {
         color: importFileButton.pressed ? Properties.buttonPressed : importFileButton.hovered ? Properties.buttonHover : Properties.button
-        radius: 7
+        radius: Properties.radiusM
         layer.enabled: true
 
         // Hover Effect

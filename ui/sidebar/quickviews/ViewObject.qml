@@ -18,7 +18,7 @@ Rectangle
 	Layout.preferredHeight: width
 
 	color: Properties.controlBackground
-	radius: 7
+	radius: Properties.radiusM
 
 	border
 	{

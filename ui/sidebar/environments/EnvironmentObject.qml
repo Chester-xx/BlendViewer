@@ -18,7 +18,7 @@ Rectangle
     onSelected: environments.activeEnv = label.toUpperCase()
 
     color: Properties.controlBackground
-    radius: 7
+    radius: Properties.radiusM
     scale: mouseArea.pressed ? 0.98 : 1.0
 
     border
@@ -153,7 +153,7 @@ Rectangle
 				{
 					width: parent.width
 					height: parent.height
-					radius: 10
+					radius: Properties.radiusL
 					color: Properties.border
 
 					// Fill Portion
@@ -161,7 +161,7 @@ Rectangle
 					{
 						width: loadingBar.visualPosition * parent.width
 						height: parent.height
-						radius: 10
+						radius: Properties.radiusL
 						color: loadingBar.value < 100 ? Properties.button : Properties.controlEnabled
 
 						Behavior on color

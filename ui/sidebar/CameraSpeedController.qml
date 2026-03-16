@@ -125,7 +125,7 @@ Rectangle
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
                     width: cameraSpeedSlider.availableWidth
                     height: cameraSpeedSlider.height * 1 / 8
-                    radius: 2
+                    radius: Properties.radiusS
                     color: Properties.border
 
                     // Filled Portion
@@ -133,7 +133,7 @@ Rectangle
                     {
                         width: cameraSpeedSlider.visualPosition * parent.width
                         height: parent.height
-                        radius: 2
+                        radius: Properties.radiusS
                         color: Properties.button
                     }
                     // - Filled Portion
@@ -147,7 +147,7 @@ Rectangle
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
                     width: cameraSpeedSliderTrack.height * 4
                     height: cameraSpeedSliderTrack.height * 4
-                    radius: 20
+                    radius: Properties.radiusL
                     color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
                     border.color: cameraSpeedSlider.pressed ? Properties.buttonPressed : cameraSpeedSlider.hovered ? Properties.buttonHover : Properties.button
                     border.width: 1

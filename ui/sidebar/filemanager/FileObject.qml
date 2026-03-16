@@ -16,7 +16,7 @@ Rectangle
     signal selected()
 
     color: Properties.controlBackground
-    radius: 7
+    radius: Properties.radiusM
     scale: mouseArea.pressed ? 0.98 : 1.0
 
     border

@@ -81,7 +81,7 @@ Rectangle
             background: Rectangle
             {
                 color: "transparent"
-                radius: width / 2
+                radius: Properties.radiusL
             }
             // - Remove Button Background
 

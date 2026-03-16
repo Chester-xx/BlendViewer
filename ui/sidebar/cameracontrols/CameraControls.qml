@@ -3,12 +3,13 @@ import QtQuick.Layouts
 
 import BlendViewer
 
+// CameraControls.qml
 Rectangle 
 {
 	id: cameraControls
 
 	color: Properties.controlBackground
-	radius: 7
+	radius: Properties.radiusM
 
 	Layout.fillWidth: true
 	Layout.preferredHeight: sideBar.height * 1 / 6
@@ -22,6 +23,7 @@ Rectangle
 		color: Properties.border
 	}
 
+	// Layout
 	ColumnLayout
 	{
 		spacing: 0
@@ -71,7 +73,7 @@ Rectangle
 			unit: "m"
 		}
 		// - Distance
-
 	}
-
+	// - Layout
 }
+// - CameraControls.qml

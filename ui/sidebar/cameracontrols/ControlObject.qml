@@ -58,7 +58,7 @@ Rectangle
 			Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
 			color: Properties.tertiaryBackground
-			radius: 4
+			radius: Properties.radiusS
 
 			border
 			{
@@ -203,7 +203,7 @@ Rectangle
 			y: slider.topPadding + slider.availableHeight / 2 - height / 2
 			width: slider.availableWidth
 			height: slider.height * 1 / 8
-			radius: 2
+			radius: Properties.radiusS
 			color: Properties.border
 
 			// Filled Portion
@@ -211,7 +211,7 @@ Rectangle
 			{
 				width: slider.visualPosition * parent.width
 				height: parent.height
-				radius: 2
+				radius: Properties.radiusS
 				color: Properties.button
 			}
 			// - Filled Portion
@@ -225,7 +225,7 @@ Rectangle
 			y: slider.topPadding + slider.availableHeight / 2 - height / 2
 			width: sliderTrack.height * 4
 			height: sliderTrack.height * 4
-			radius: 20
+			radius: Properties.radiusL
 			color: slider.pressed ? Properties.buttonPressed : slider.hovered ? Properties.buttonHover : Properties.button
 			border.color: slider.pressed ? Properties.buttonPressed : slider.hovered ? Properties.buttonHover : Properties.button
 
