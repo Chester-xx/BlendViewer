@@ -113,8 +113,8 @@ Rectangle
             {
                 visible: settingsButton.hovered
                 text: qsTr("Open Settings")
-                delay: 1000
-                timeout: 3000
+                delay: Properties.tooltipDelay
+                timeout: Properties.tooltipTimeout
             }
         }
         // - Settings Button

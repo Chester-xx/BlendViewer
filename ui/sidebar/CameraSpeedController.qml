@@ -112,8 +112,8 @@ Rectangle
                 {
                     visible: cameraSpeedSlider.hovered
                     text: qsTr("Change camera speed")
-                    delay: 2000
-                    timeout: 3000
+                    delay: Properties.tooltipDelay
+                    timeout: Properties.tooltipTimeout
                 }
 
                 // Track

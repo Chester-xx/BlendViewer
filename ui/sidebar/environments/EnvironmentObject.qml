@@ -69,8 +69,8 @@ Rectangle
     {
         visible: mouseArea.containsMouse
         text: qsTr("Apply " + environmentObject.label + " environment")
-        delay: 1000
-        timeout: 3000
+        delay: Properties.tooltipDelay
+        timeout: Properties.tooltipTimeout
     }
 
 // Content

@@ -21,8 +21,8 @@ Button
     {
         visible: importFileButton.hovered
         text: qsTr("Import a glTF model file into the viewer")
-        delay: 1000
-        timeout: 3000
+        delay: Properties.tooltipDelay
+        timeout: Properties.tooltipTimeout
     }
 
     // Scale Effect

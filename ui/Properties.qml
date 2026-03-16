@@ -35,10 +35,10 @@ QtObject
 	// - Font Scales
 
 	// Spacing & Margin Scales
-		readonly property real marginXS:  scale * 6
-		readonly property real marginS:  scale * 10
-		readonly property real marginM:  scale * 16
-		readonly property real marginL:  scale * 20
+		readonly property real marginXS: scale * 6
+		readonly property real marginS: scale * 10
+		readonly property real marginM: scale * 16
+		readonly property real marginL: scale * 20
 	// - Spacing & Margin Scales
 
 	// Border Scales
@@ -76,5 +76,10 @@ QtObject
 		readonly property color lightButtonPressed: "#1E7FE0"
 	// - Button Colors
 
+	// ToolTips
+		readonly property int tooltipDelay:   1500
+		readonly property int tooltipTimeout: 3000
+
+	// - ToolTips
 	
 }

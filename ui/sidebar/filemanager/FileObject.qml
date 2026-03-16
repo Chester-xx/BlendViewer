@@ -54,8 +54,8 @@ Rectangle
     {
         visible: mouseArea.containsMouse
         text: filePath
-        delay: 1000
-        timeout: 3000
+        delay: Properties.tooltipDelay
+        timeout: Properties.tooltipTimeout
     }
 
     // Content

@@ -139,8 +139,8 @@ Rectangle
 	{
 		visible: mouseArea.containsMouse
 		text: qsTr("Switch to " + viewObject.label + " view")
-		delay: 1000
-		timeout: 3000
+		delay: Properties.tooltipDelay
+		timeout: Properties.tooltipTimeout
 	}
 }
 // - View Object

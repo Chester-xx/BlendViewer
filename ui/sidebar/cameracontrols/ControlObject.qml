@@ -148,7 +148,6 @@ Rectangle
 			}
 			// - Value & Unit Row
 
-			// Validation Tooltip
 			ToolTip
 			{
 				id: validationTooltip
@@ -163,10 +162,9 @@ Rectangle
 						return qsTr("Maximum value is " + controlObject.maxValue + controlObject.unit)
 					return qsTr("Invalid input")
 				}
-				delay: 500
+				delay: Properties.tooltipDelay
 				timeout: -1
 			}
-			// - Validation Tooltip
 		}
 		// - Value Box
 	}
