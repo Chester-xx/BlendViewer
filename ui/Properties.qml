@@ -12,6 +12,7 @@ QtObject
 		readonly property string github: "https://github.com/Chester-xx/BlendViewer/"
 		readonly property string license: "MIT"
 		readonly property string rhi_pipeline: "D3D11"
+
 		readonly property string rootSource: "qrc:/qt/qml/BlendViewer/"
 		readonly property string iconSource: rootSource + "assets/icons/"
 		readonly property string iconSourceEnvironment: iconSource + "environments/"
@@ -26,12 +27,24 @@ QtObject
 	// - Window Specifications
 
 	// Font Scales
-		readonly property real fontS: Math.max(scale * 9,  8)
-		readonly property real fontM: Math.max(scale * 11, 9)
-		readonly property real fontL: Math.max(scale * 13, 10)
-		readonly property real fontTitle: Math.max(scale * 17, 13)
-		readonly property real fontSub: Math.max(scale * 12, 9)
+		readonly property real fontS: scale * 9
+		readonly property real fontM: scale * 11
+		readonly property real fontL: scale * 13
+		readonly property real fontTitle: scale * 12
+		readonly property real fontSub: scale * 7
 	// - Font Scales
+
+	// Spacing & Margin Scales
+		readonly property real marginXS:  scale * 6
+		readonly property real marginS:  scale * 10
+		readonly property real marginM:  scale * 16
+		readonly property real marginL:  scale * 20
+	// - Spacing & Margin Scales
+
+	// Border Scales
+		readonly property real radiusS: 4.0
+		readonly property real radiusM: 7.0   
+	// - Border Scales
 
 	// Background Colors | Main | Border | Controls
 		readonly property color primaryBackground: "#171D28"

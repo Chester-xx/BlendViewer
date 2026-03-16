@@ -38,7 +38,7 @@ Rectangle
             {
                 text: qsTr("glTF Studio")
                 leftPadding: appInfo.width * 1 / 16
-                font.pixelSize: appInfo.height * 1 / 4.7
+                font.pixelSize: Properties.fontTitle
                 font.bold: true
                 color: Properties.textPrimary
             }
@@ -49,7 +49,7 @@ Rectangle
             {
                 text: qsTr(Properties.version)
                 leftPadding: appInfo.width * 1 / 16
-                font.pixelSize: appInfo.height * 1 / 6.7
+                font.pixelSize: Properties.fontSub
                 color: Properties.textSecondary
             }
             // - Version Heading
