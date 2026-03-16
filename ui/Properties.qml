@@ -22,7 +22,16 @@ QtObject
 		readonly property bool fullscreen: false
 		readonly property int minimumWidth: 900
 		readonly property int minimumHeight: 600
+		property real scale: 1.0
 	// - Window Specifications
+
+	// Font Scales
+		readonly property real fontS: Math.max(scale * 9,  8)
+		readonly property real fontM: Math.max(scale * 11, 9)
+		readonly property real fontL: Math.max(scale * 13, 10)
+		readonly property real fontTitle: Math.max(scale * 17, 13)
+		readonly property real fontSub: Math.max(scale * 12, 9)
+	// - Font Scales
 
 	// Background Colors | Main | Border | Controls
 		readonly property color primaryBackground: "#171D28"

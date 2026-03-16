@@ -18,6 +18,15 @@ Window {
     color: Properties.primaryBackground
     title: qsTr("BlendViewer")
 
+    // Scale bounding for component size calculation
+    Binding
+    {
+        target: Properties
+        property: "scale"
+        value: mainWindow.height / 800
+    }
+    // - Scale bounding
+
     // Debugging during UI iteration
     visibility: Properties.fullscreen ? Window.FullScreen : Window.Maximized
 
@@ -41,4 +50,5 @@ Window {
         id: viewPort
     }
     // - ViewPort.qml
+
 }
