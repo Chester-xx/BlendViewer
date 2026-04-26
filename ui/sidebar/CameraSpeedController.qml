@@ -9,7 +9,7 @@ Rectangle
 {
     id: cameraSpeed
 
-    height: parent.height * 1 / 17
+    height: Properties.baseComponentH
     color: Properties.tertiaryBackground
 
     anchors
@@ -46,7 +46,7 @@ Rectangle
                 id: cameraSpeedIcon
 
                 source: Properties.iconSource + "camera-speed.svg"
-                width: Properties.fontM * 1.5
+                width: Properties.fontL * 1.5
                 height: width
             }
             // - Icon
@@ -59,7 +59,7 @@ Rectangle
                 anchors.verticalCenter: parent.verticalCenter
                 text: qsTr("Camera Speed")
                 color: Properties.textSecondary
-                font.pixelSize: Properties.fontM
+                font.pixelSize: Properties.fontL
                 leftPadding: 3
             }
             // - Text
@@ -82,7 +82,7 @@ Rectangle
                 anchors.verticalCenter: parent.verticalCenter
                 text: cameraSpeedSlider.value.toFixed(1) + "x"
                 color: Properties.textSecondary
-                font.pixelSize: Properties.fontM
+                font.pixelSize: Properties.fontL
             }
             // - Speed Value
         }
@@ -121,10 +121,10 @@ Rectangle
                 {
                     id: cameraSpeedSliderTrack
 
-                    x: cameraSpeedSlider.leftPadding
+                    x: 0
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
-                    width: cameraSpeedSlider.availableWidth
-                    height: cameraSpeedSlider.height * 1 / 8
+                    width: cameraSpeedSlider.width
+                    height: Properties.sliderComponent
                     radius: Properties.radiusS
                     color: Properties.border
 
@@ -143,7 +143,7 @@ Rectangle
                 // Handle
                 handle: Rectangle
                 {
-                    x: cameraSpeedSlider.leftPadding + cameraSpeedSlider.visualPosition * (cameraSpeedSlider.availableWidth - width)
+                    x: cameraSpeedSlider.visualPosition * (cameraSpeedSlider.width - width)
                     y: cameraSpeedSlider.topPadding + cameraSpeedSlider.availableHeight / 2 - height / 2
                     width: cameraSpeedSliderTrack.height * 4
                     height: cameraSpeedSliderTrack.height * 4
