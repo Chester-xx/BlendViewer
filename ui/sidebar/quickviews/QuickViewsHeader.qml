@@ -8,7 +8,7 @@ RowLayout
 {
     width: parent.width
     Layout.fillWidth: true
-    Layout.topMargin: Properties.marginXS
+    Layout.topMargin: Properties.marginM
     Layout.leftMargin: Properties.marginM
     Layout.rightMargin: Properties.marginM
 

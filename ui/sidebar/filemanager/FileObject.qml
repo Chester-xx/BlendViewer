@@ -31,7 +31,7 @@ Rectangle
     }
 
     Layout.fillWidth: true
-    Layout.preferredHeight: sideBar.height * 1 / 22
+    Layout.preferredHeight: Properties.baseComponentH
 
     Behavior on scale
     {
@@ -61,12 +61,12 @@ Rectangle
     // Content
     Row
     {
-        spacing: parent.height * 1 / 6
+        spacing: Properties.marginS
 
         anchors
         {
             fill: parent
-            margins: parent.height * 1 / 4
+            margins: Properties.marginXS
         }
 
         // File Icon
@@ -98,7 +98,7 @@ Rectangle
             {
                 text: fileObject.fileName
                 width: parent.width
-                font.pixelSize: Properties.fontM
+                font.pixelSize: Properties.fontL
                 color: mouseArea.containsMouse ? Properties.textPrimary : Properties.textSecondary
                 elide: Text.ElideMiddle
 
@@ -114,7 +114,7 @@ Rectangle
             {
                 text: fileObject.fileSize
                 width: parent.width
-                font.pixelSize: Properties.fontS
+                font.pixelSize: Properties.fontM
                 color: Properties.border
                 elide: Text.ElideRight
             }

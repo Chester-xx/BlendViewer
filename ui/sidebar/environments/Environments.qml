@@ -11,9 +11,9 @@ Rectangle
     property string activeEnv: "NONE"
 
     Layout.fillWidth: true
-    Layout.topMargin: sideBar.height * 1 / 100
-    Layout.leftMargin: sideBar.width * 1 / 20
-    Layout.rightMargin: sideBar.width * 1 / 20
+    Layout.topMargin: Properties.marginXS
+    Layout.leftMargin: Properties.marginM
+    Layout.rightMargin: Properties.marginM
     Layout.preferredHeight: envColumn.implicitHeight
 
     color: "transparent"
@@ -24,7 +24,7 @@ Rectangle
         id: envColumn
 
         width: parent.width
-        spacing: sideBar.height * 1 / 100
+        spacing: Properties.marginS
 
         // EnvironmentObject.qml
             // Studio

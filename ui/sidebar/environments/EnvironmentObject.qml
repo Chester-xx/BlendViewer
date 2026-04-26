@@ -13,6 +13,7 @@ Rectangle
     property string label
     property string icon
     property real loadValue: 0.0
+
     onLoadValueChanged: loadingBar.value = loadValue
     signal selected()
     onSelected: environments.activeEnv = label.toUpperCase()
@@ -33,7 +34,7 @@ Rectangle
     }
 
     Layout.fillWidth: true
-    Layout.preferredHeight: sideBar.height * 1 / 22
+    Layout.preferredHeight: Properties.baseComponentH
 
     // Hover Effect
     Behavior on color
@@ -73,15 +74,15 @@ Rectangle
         timeout: Properties.tooltipTimeout
     }
 
-// Content
+	// Content
 	Row
 	{
-		spacing: parent.height * 1 / 6
+		spacing: Properties.marginS
 		
 		anchors
 		{
 			fill: parent
-			margins: parent.height * 1 / 8
+			margins: Properties.marginXS
 		}
 
 		// Thumbnail Icon
@@ -102,9 +103,9 @@ Rectangle
 		// Text & Bar Column
 		Column
 		{
-			width: parent.width - environmentIcon.width - (parent.spacing * 3 / 2)
+			width: parent.width - environmentIcon.width - (Properties.marginS + Properties.marginXS)
 			height: implicitHeight
-			spacing: height * 1 / 8
+			spacing: Properties.marginXS
 
 			anchors.verticalCenter: parent.verticalCenter
 			
@@ -113,7 +114,7 @@ Rectangle
 			{
 				text: environmentObject.label
 				width: parent.width
-				font.pixelSize: Properties.fontM
+				font.pixelSize: Properties.fontL
 				color: mouseArea.containsMouse || loadingBar.hovered ? Properties.textPrimary : Properties.textSecondary
 			
 				Behavior on color
@@ -136,7 +137,7 @@ Rectangle
 				to: 100
 				value: environmentObject.loadValue
 				width: parent.width
-				height: parent.height * 1 / 5
+				height: Properties.sliderComponent
 				enabled: false
 				
 				Behavior on value

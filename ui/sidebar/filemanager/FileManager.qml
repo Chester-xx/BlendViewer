@@ -10,10 +10,13 @@ Rectangle
     id: fileManager
 
     Layout.fillWidth: true
-    Layout.topMargin: sideBar.height * 1 / 100
-    Layout.bottomMargin: sideBar.height * 1 / 100
-    Layout.leftMargin: sideBar.width * 1 / 20
-    Layout.rightMargin: sideBar.width * 1 / 20
+    
+    Layout.topMargin: Properties.marginXS
+    Layout.bottomMargin: Properties.marginS
+
+    Layout.leftMargin: Properties.marginM
+    Layout.rightMargin: Properties.marginM
+    
     Layout.preferredHeight: fileColumn.implicitHeight
 
     color: "transparent"
@@ -46,7 +49,7 @@ Rectangle
         id: fileColumn
 
         width: parent.width
-        spacing: sideBar.height * 1 / 100
+        spacing: Properties.marginS
 
         Repeater
         {

@@ -11,9 +11,9 @@ RowLayout
 
     width: parent.width
     Layout.fillWidth: true
-    Layout.topMargin: sideBar.height * 1 / 50
-    Layout.leftMargin: sideBar.width * 1 / 20
-    Layout.rightMargin: sideBar.width * 1 / 20
+    Layout.topMargin: Properties.marginM
+    Layout.leftMargin: Properties.marginM
+    Layout.rightMargin: Properties.marginM
 
     // Section Label
     Text
@@ -36,7 +36,7 @@ RowLayout
     // Active Environment Indicator
 	RowLayout
 	{
-		spacing: environmentActiveText.font.pixelSize * 1 / 4
+		spacing: Properties.fontS / 2
 		Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
 		// Environment Active Notifier
@@ -45,7 +45,7 @@ RowLayout
 			id: environmentActive
 
 			source: Properties.iconSource + "dot.svg"
-			width: environmentActiveText.font.pixelSize * 3 / 4
+			width: Properties.fontM
 			height: width
 			sourceSize.width: width
 			sourceSize.height: width
@@ -53,7 +53,6 @@ RowLayout
 			mipmap: true
 			color: Properties.button
 
-			Layout.rightMargin: width * 1 / 3
 			Layout.alignment: Qt.AlignVCenter
 
 			// Inactive Environment color effect
@@ -92,7 +91,7 @@ RowLayout
 			id: environmentActiveText
 
 			text: environments.activeEnv
-			font.pixelSize: Properties.fontS
+			font.pixelSize: Properties.fontM
 			color: Properties.textSecondary
 
 			Layout.alignment: Qt.AlignVCenter
