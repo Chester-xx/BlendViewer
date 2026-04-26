@@ -8,9 +8,9 @@ RowLayout
 {
     width: parent.width
     Layout.fillWidth: true
-    Layout.topMargin: sideBar.height * 1 / 50
-    Layout.leftMargin: sideBar.width * 1 / 20
-    Layout.rightMargin: sideBar.width * 1 / 20
+    Layout.topMargin: Properties.marginXS
+    Layout.leftMargin: Properties.marginM
+    Layout.rightMargin: Properties.marginM
 
     // Section Label
     Text

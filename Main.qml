@@ -27,6 +27,15 @@ Window {
     }
     // - Scale bounding
 
+    // Scale width bounding
+    Binding
+    {
+        target: Properties
+        property: "scaleWidth"
+        value: mainWindow.width / 1200
+    }
+    // - Scale width bounding
+
     // Debugging during UI iteration
     visibility: Properties.fullscreen ? Window.FullScreen : Window.Maximized
 
@@ -34,6 +43,14 @@ Window {
     SideBar
     {
         id: sideBar
+
+        Binding
+        {
+            target: Properties
+            property: "sideBarWidth"
+            value: mainWindow.width / 5
+        }
+
     }
     // - SideBar.qml
 

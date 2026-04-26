@@ -16,9 +16,9 @@ Rectangle
 	property string unit: "°"
 
 	Layout.fillWidth: true
-	Layout.preferredHeight: sideBar.height * 1 / 20
-	Layout.leftMargin: sideBar.width * 1 / 20
-	Layout.rightMargin: sideBar.width * 1 / 20
+	Layout.preferredHeight: Properties.cameraControlsComponent / 4
+	Layout.leftMargin: Properties.marginS
+	Layout.rightMargin: Properties.marginS
 
 	color: "transparent"
 
@@ -53,8 +53,8 @@ Rectangle
 		{
 			id: valueBox
 
-			Layout.preferredWidth: valueRow.implicitWidth + (sideBar.width * 1 / 20)
-			Layout.preferredHeight: parent.height * 7 / 10
+			Layout.preferredWidth: valueRow.implicitWidth + (Properties.cameraControlsComponent / 12)
+			Layout.preferredHeight: Properties.sliderInputComponent
 			Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
 
 			color: Properties.tertiaryBackground
@@ -178,6 +178,7 @@ Rectangle
 		from: controlObject.minValue
 		to: controlObject.maxValue
 		value: controlObject.value
+
 		height: parent.height * 1 / 2
 
 		anchors
@@ -197,10 +198,12 @@ Rectangle
 		{
 			id: sliderTrack
 
-			x: slider.leftPadding
+			x: 0
 			y: slider.topPadding + slider.availableHeight / 2 - height / 2
-			width: slider.availableWidth
-			height: slider.height * 1 / 8
+
+			width: controlObject.width
+			height: Properties.sliderComponent
+			
 			radius: Properties.radiusS
 			color: Properties.border
 
@@ -209,6 +212,7 @@ Rectangle
 			{
 				width: slider.visualPosition * parent.width
 				height: parent.height
+
 				radius: Properties.radiusS
 				color: Properties.button
 			}
@@ -219,10 +223,12 @@ Rectangle
 		// Handle
 		handle: Rectangle
 		{
-			x: slider.leftPadding + slider.visualPosition * (slider.availableWidth - width)
+			x: slider.visualPosition * (controlObject.width - width)
 			y: slider.topPadding + slider.availableHeight / 2 - height / 2
+
 			width: sliderTrack.height * 4
 			height: sliderTrack.height * 4
+
 			radius: Properties.radiusL
 			color: slider.pressed ? Properties.buttonPressed : slider.hovered ? Properties.buttonHover : Properties.button
 			border.color: slider.pressed ? Properties.buttonPressed : slider.hovered ? Properties.buttonHover : Properties.button

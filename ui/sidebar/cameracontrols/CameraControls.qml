@@ -12,10 +12,10 @@ Rectangle
 	radius: Properties.radiusM
 
 	Layout.fillWidth: true
-	Layout.preferredHeight: sideBar.height * 1 / 6
-	Layout.topMargin: sideBar.height * 1 / 100
-	Layout.leftMargin: sideBar.width * 1 / 20
-	Layout.rightMargin: sideBar.width * 1 / 20
+	Layout.preferredHeight: Properties.cameraControlsComponent
+	Layout.topMargin: Properties.marginXS
+	Layout.leftMargin: Properties.marginM
+	Layout.rightMargin: Properties.marginM
 
 	border
 	{

@@ -10,12 +10,17 @@ Button
     id: importFileButton
 
     flat: true
-    implicitWidth: sideBar.width * 9 / 10
-    implicitHeight: sideBar.height * 1 / 30
+    implicitHeight: Properties.buttonH
     scale: importFileButton.pressed ? 0.98 : 1
 
+    Layout.fillWidth: true
     Layout.alignment: Qt.AlignHCenter
-    Layout.topMargin: sideBar.height * 1 / 100
+
+    Layout.topMargin: Properties.marginL
+    Layout.bottomMargin: Properties.marginXS
+
+    Layout.leftMargin: Properties.marginM
+    Layout.rightMargin: Properties.marginM
 
     ToolTip
     {

@@ -9,7 +9,7 @@ Rectangle
 {
     id: sideBar
 
-    width: Math.max(parent.width * 1 / 8, 200)
+    width: Properties.sideBarWidth
     height: parent.height
     color: Properties.secondaryBackground
 
@@ -86,9 +86,9 @@ Rectangle
             {
                 text: qsTr("Drag & Drop .glTF or .glb Files")
                 font.pixelSize: Properties.fontSub
-                topPadding: 10
                 color: Properties.textSecondary
                 Layout.alignment: Qt.AlignHCenter
+                Layout.bottomMargin: Properties.marginL
             }
             // - Import Label
 

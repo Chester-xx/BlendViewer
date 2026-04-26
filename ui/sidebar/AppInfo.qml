@@ -9,7 +9,7 @@ Rectangle
 {
     id: appInfo
 
-    height: parent.height * 1 / 17
+    height: Properties.baseComponentH
     color: Properties.tertiaryBackground
 
     anchors
@@ -37,7 +37,7 @@ Rectangle
             Text
             {
                 text: qsTr("glTF Studio")
-                leftPadding: appInfo.width * 1 / 16
+                leftPadding: Properties.marginM
                 font.pixelSize: Properties.fontTitle
                 font.bold: true
                 color: Properties.textPrimary
@@ -48,7 +48,7 @@ Rectangle
             Text
             {
                 text: qsTr(Properties.version)
-                leftPadding: appInfo.width * 1 / 16
+                leftPadding: Properties.marginM
                 font.pixelSize: Properties.fontSub
                 color: Properties.textSecondary
             }
@@ -66,14 +66,12 @@ Rectangle
             flat: true
             scale: settingsButton.pressed ? 0.92 : 1.0
             icon.source: Properties.iconSource + "settings.svg"
-            icon.width: appInfo.height * 3 / 8
-            icon.height: appInfo.height * 3 / 8
+            icon.width: parent.height * 0.5
+            icon.height: parent.height * 0.5
             icon.color: settingsIconColor
 
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            Layout.rightMargin: appInfo.width / 16
-            Layout.preferredWidth: appInfo.height * 1 / 2
-            Layout.preferredHeight: appInfo.height * 1 / 2
+            Layout.rightMargin: Properties.marginS
             Layout.minimumWidth: 30
             Layout.minimumHeight: 30
 
@@ -112,7 +110,7 @@ Rectangle
             ToolTip
             {
                 visible: settingsButton.hovered
-                text: qsTr("Open Settings")
+                text: qsTr("Open Settings Menu")
                 delay: Properties.tooltipDelay
                 timeout: Properties.tooltipTimeout
             }

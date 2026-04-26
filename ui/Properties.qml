@@ -21,9 +21,16 @@ QtObject
 
 	// Window Specifications
 		readonly property bool fullscreen: false
+
 		readonly property int minimumWidth: 900
 		readonly property int minimumHeight: 600
+		
+		readonly property real minimumSideBarWidth: minimumWidth / 6
+		readonly property real maximumSideBarWidth: minimumWidth / 4
+		property int sideBarWidth: maximumSideBarWidth
+
 		property real scale: 1.0
+		property real scaleWidth: 1.0
 	// - Window Specifications
 
 	// Font Scales
@@ -31,21 +38,34 @@ QtObject
 		readonly property real fontM: scale * 9
 		readonly property real fontL: scale * 10
 		readonly property real fontTitle: scale * 12
-		readonly property real fontSub: scale * 7.5
+		readonly property real fontSub: scale * 8
 	// - Font Scales
 
 	// Spacing & Margin Scales
 		readonly property real marginXS: scale * 6
-		readonly property real marginS: scale * 10
+		readonly property real marginS: scale * 12
 		readonly property real marginM: scale * 16
 		readonly property real marginL: scale * 20
 	// - Spacing & Margin Scales
 
 	// Border Scales
 		readonly property real radiusS: 4
-		readonly property real radiusM: 7  
+		readonly property real radiusM: 7
 		readonly property real radiusL: 100
 	// - Border Scales
+
+	// Component Scales
+		readonly property real buttonH: scale * 40
+
+		readonly property real viewComponent: scale * 20
+		readonly property real cameraControlsComponent: scale * 150
+
+		readonly property real baseComponentW: scale * 200
+		readonly property real baseComponentH: scale * 50
+
+		readonly property real sliderInputComponent: scale * 15
+		readonly property real sliderComponent: scale * 3
+	// - Component Scales
 
 	// Background Colors | Main | Border | Controls
 		readonly property color primaryBackground: "#171D28"
@@ -59,7 +79,7 @@ QtObject
 	
 		readonly property color controlBackground: "#1A2634"
 		readonly property color controlEnabled: "#21C35D"
-		// - Background Colors
+	// - Background Colors
 
 	// Text Colors
 		readonly property color textPrimary: "#ffffff"
@@ -79,7 +99,6 @@ QtObject
 	// ToolTips
 		readonly property int tooltipDelay:   1500
 		readonly property int tooltipTimeout: 3000
-
 	// - ToolTips
 	
 }
