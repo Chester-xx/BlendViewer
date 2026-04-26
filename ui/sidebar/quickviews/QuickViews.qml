@@ -10,9 +10,9 @@ Rectangle
 	id: quickViews
 
 	Layout.fillWidth: true
-	Layout.topMargin: sideBar.height * 1 / 100
-	Layout.leftMargin: sideBar.width * 1 / 20
-	Layout.rightMargin: sideBar.width * 1 / 20
+	Layout.topMargin: Properties.marginXS
+	Layout.leftMargin: Properties.marginM
+	Layout.rightMargin: Properties.marginM
 	Layout.preferredHeight: viewGrid.implicitHeight
 
 	color: "transparent"

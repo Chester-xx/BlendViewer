@@ -69,10 +69,10 @@ Rectangle
 		IconImage
 		{
 			source: Properties.iconSource + viewObject.icon
-			width: viewObject.width * 1 / 3
-			height: viewObject.width * 1 / 3
-			sourceSize.width: viewObject.width * 1 / 3
-			sourceSize.height: viewObject.width * 1 / 3
+			width: Properties.viewComponent
+			height: Properties.viewComponent
+			sourceSize.width: Properties.viewComponent
+			sourceSize.height: Properties.viewComponent
 			fillMode: Image.PreserveAspectFit
 			mipmap: true
 			anchors.horizontalCenter: parent.horizontalCenter
