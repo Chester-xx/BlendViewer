@@ -23,7 +23,8 @@ Window {
     {
         target: Properties
         property: "scale"
-        value: mainWindow.height / 800
+        value: mainWindow.height / 800 // ----- debug
+        // value: mainWindow.width / 1200 ----- Inversing matches the scaling performance issues either horizontally or vertically
     }
     // - Scale bounding
 

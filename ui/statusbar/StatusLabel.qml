@@ -19,8 +19,8 @@ Row
 	{
 		visible: icon !== ""
 		source: icon
-		width: statusBar.height * 1 / 2
-		height: statusBar.height * 1 / 2
+		width: Properties.baseComponentH / 3
+		height: width
 		fillMode: Image.PreserveAspectFit
 		mipmap: true
 		

@@ -8,7 +8,7 @@ Rectangle
 {
     id: statusBar
 
-    height: Math.max(parent.height * 1 / 43, 15)
+    height: Properties.baseComponentH / 2
     color: "#101921"
 
     anchors
@@ -26,14 +26,15 @@ Rectangle
         anchors
         {
             fill: parent
-            leftMargin: 12
-            rightMargin: 12
+
+            leftMargin: Properties.marginM
+            rightMargin: Properties.marginM
         }
 
         // Left Group | Mesh, Vertex, Material
         Row
         {
-            spacing: 16
+            spacing: Properties.marginM
             Layout.alignment: Qt.AlignVCenter
 
             // StatusLabel.qml
@@ -51,14 +52,13 @@ Rectangle
         Item
         {
             Layout.fillWidth: true
-            Layout.minimumWidth: 8
         }
         // - Spacer
 
         // Right Group | FPS, RHI
         Row
         {
-            spacing: 16
+            spacing: Properties.marginM
             Layout.alignment: Qt.AlignVCenter
             // StatusLabel.qml
             // - FPS Counter
