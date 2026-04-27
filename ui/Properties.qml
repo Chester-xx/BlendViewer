@@ -24,10 +24,10 @@ QtObject
 
 		readonly property int minimumWidth: 900
 		readonly property int minimumHeight: 600
-		
-		readonly property real minimumSideBarWidth: minimumWidth / 6
-		readonly property real maximumSideBarWidth: minimumWidth / 4
-		property int sideBarWidth: maximumSideBarWidth
+
+		property real minimumSideBarWidth: 350
+		property real maximumSideBarWidth: 400
+		property real sideBarWidth: 400
 
 		property real scale: 1.0
 		property real scaleWidth: 1.0

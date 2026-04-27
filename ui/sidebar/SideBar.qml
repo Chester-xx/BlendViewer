@@ -9,8 +9,9 @@ Rectangle
 {
     id: sideBar
 
-    width: Properties.sideBarWidth
+    width: Properties.sideBarWidth < Properties.minimumSideBarWidth ? Properties.minimumSideBarWidth : Properties.sideBarWidth > Properties.maximumSideBarWidth ? Properties.maximumSideBarWidth : Properties.sideBarWidth
     height: parent.height
+
     color: Properties.secondaryBackground
 
     anchors
@@ -158,6 +159,43 @@ Rectangle
         id: cameraSpeed
     }
     // - CameraSpeedController.qml
+
+    // Resize Handle
+    MouseArea
+    {
+        id: resizeHandle
+
+        width: 8
+        hoverEnabled: true
+        cursorShape: Qt.SizeHorCursor
+
+        anchors
+        {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+        }
+
+        property real dragSX: 0
+        property real dragSW: 0
+
+        onPressed: (mouse) =>
+        {
+            dragSX = mouse.x
+            dragSW = Properties.sideBarWidth
+        }
+
+        onPositionChanged: (mouse) =>
+        {
+            if (pressed)
+            {
+                var delta = mouse.x - dragSX
+                Properties.sideBarWidth = dragSW + delta
+            }
+        }
+
+    }
+    // - Resize Handle
 
 }
 // - Side Bar

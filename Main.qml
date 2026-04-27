@@ -23,8 +23,8 @@ Window {
     {
         target: Properties
         property: "scale"
-        value: mainWindow.height / 800 // ----- debug
-        // value: mainWindow.width / 1200 ----- Inversing matches the scaling performance issues either horizontally or vertically
+        value: mainWindow.width / 1200 // ----- debug
+        // value: mainWindow.height / 800 ----- Inversing matches the scaling performance issues either horizontally or vertically
     }
     // - Scale bounding
 
@@ -37,6 +37,24 @@ Window {
     }
     // - Scale width bounding
 
+    // Max Side Bar Width Binding
+    Binding
+    {
+        target: Properties
+        property: "maximumSideBarWidth"
+        value: mainWindow.width / 3
+    }
+    // - Max SBW Binding
+
+    // Min Side Bar Width Binding
+    Binding
+    {
+        target: Properties
+        property: "minimumSideBarWidth"
+        value: mainWindow.width / 6
+    }
+    // - MIN SBW Binding
+
     // Debugging during UI iteration
     visibility: Properties.fullscreen ? Window.FullScreen : Window.Maximized
 
@@ -44,14 +62,6 @@ Window {
     SideBar
     {
         id: sideBar
-
-        Binding
-        {
-            target: Properties
-            property: "sideBarWidth"
-            value: mainWindow.width / 5
-        }
-
     }
     // - SideBar.qml
 
