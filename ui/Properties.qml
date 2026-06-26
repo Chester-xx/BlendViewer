@@ -30,15 +30,15 @@ QtObject
 		property real sideBarWidth: 400
 
 		property real scale: 1.0
-		property real scaleWidth: 1.0
+		property real scaleHeight: 1.0
 	// - Window Specifications
 
 	// Font Scales
-		readonly property real fontS: scale * 7
-		readonly property real fontM: scale * 9
-		readonly property real fontL: scale * 10
-		readonly property real fontTitle: scale * 12
-		readonly property real fontSub: scale * 8
+		readonly property real fontS: scaleHeight * 7
+		readonly property real fontM: scaleHeight * 9
+		readonly property real fontL: scaleHeight * 10
+		readonly property real fontTitle: scaleHeight * 12
+		readonly property real fontSub: scaleHeight * 8
 	// - Font Scales
 
 	// Spacing & Margin Scales

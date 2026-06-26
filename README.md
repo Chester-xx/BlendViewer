@@ -16,7 +16,7 @@
 
 ### Current Issues
 
-- **Resizing behavior** - Window Resizing causes performance issues related to layout bindings and dynamic objects being linked to both anchoring and layout bindinds.
+- **Unexpected Side Bar Resize Behavior** - On resize, occasionally glitches before reforming to its new size.
 - **`assets/models` Storage** - Currently storing models in the repository for testing. Deployment requires appdata storage.
 - **Viewport Placeholder** - Placeholder  object `Canvas` & `Rectangle` has been depricated for the use of gradients, deciding on implementation between svg or fragment shader based on performance.
 

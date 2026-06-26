@@ -18,42 +18,33 @@ Window {
     color: Properties.primaryBackground
     title: qsTr("BlendViewer")
 
-    // Scale bounding for component size calculation
-    Binding
+    // Throttled scale recalculation
+    Timer
     {
-        target: Properties
-        property: "scale"
-        value: mainWindow.width / 1200 // ----- debug
-        // value: mainWindow.height / 800 ----- Inversing matches the scaling performance issues either horizontally or vertically
-    }
-    // - Scale bounding
+        id: scaleRecalcTimer
 
-    // Scale width bounding
-    Binding
-    {
-        target: Properties
-        property: "scaleWidth"
-        value: mainWindow.width / 1200
-    }
-    // - Scale width bounding
+        interval: 32
+        repeat: false
 
-    // Max Side Bar Width Binding
-    Binding
-    {
-        target: Properties
-        property: "maximumSideBarWidth"
-        value: mainWindow.width / 3
+        onTriggered:
+        {
+            Properties.scale = Math.round((mainWindow.width / 1200) * 1000) / 1000
+            Properties.scaleHeight = Math.round((mainWindow.height / 800) * 1000) / 1000
+            Properties.maximumSideBarWidth = Math.round(mainWindow.width / 3)
+            Properties.minimumSideBarWidth = Math.round(mainWindow.width / 6)
+        }
     }
-    // - Max SBW Binding
 
-    // Min Side Bar Width Binding
-    Binding
+    function requestScaleRecalc()
     {
-        target: Properties
-        property: "minimumSideBarWidth"
-        value: mainWindow.width / 6
+        scaleRecalcTimer.restart()
     }
-    // - MIN SBW Binding
+
+    onWidthChanged: requestScaleRecalc()
+    onHeightChanged: requestScaleRecalc()
+
+    Component.onCompleted: requestScaleRecalc()
+    // - Throttled scale recalculation
 
     // Debugging during UI iteration
     visibility: Properties.fullscreen ? Window.FullScreen : Window.Maximized
