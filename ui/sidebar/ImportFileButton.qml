@@ -10,7 +10,7 @@ Button
     id: importFileButton
 
     flat: true
-    implicitHeight: Properties.buttonH
+    implicitHeight: Math.max(Properties.buttonH, labelText.implicitHeight + Properties.marginS)
     scale: importFileButton.pressed ? 0.98 : 1
 
     Layout.fillWidth: true
@@ -64,13 +64,18 @@ Button
     // Button Label
     contentItem: Item
     {
+        id: labelContainer
+
         opacity: 1
 
         // Collection of Icon and Text
         Row
         {
+            id: labelRow
+
             spacing: importFileButton.height * 1 / 10
             anchors.centerIn: parent
+            width: Math.min(implicitWidth, labelContainer.width)
 
             // Icon
             Image
@@ -90,10 +95,14 @@ Button
             // Label
             Text
             {
+                id: labelText
+
                 text: qsTr("Import glTF Model")
                 font.pixelSize: Properties.fontL
                 font.bold: true
                 color: Properties.textPrimary
+                elide: Text.ElideRight
+                width: Math.min(implicitWidth, labelContainer.width - importIcon.width - labelRow.spacing)
                 anchors.verticalCenter: parent.verticalCenter
             }
             // - Label

@@ -103,7 +103,7 @@ Rectangle
 		// Text & Bar Column
 		Column
 		{
-			width: parent.width - environmentIcon.width - (Properties.marginS + Properties.marginXS)
+			width: Math.max(0, parent.width - environmentIcon.width - (Properties.marginS + Properties.marginXS))
 			height: implicitHeight
 			spacing: Properties.marginXS
 
@@ -116,6 +116,7 @@ Rectangle
 				width: parent.width
 				font.pixelSize: Properties.fontL
 				color: mouseArea.containsMouse || loadingBar.hovered ? Properties.textPrimary : Properties.textSecondary
+				elide: Text.ElideRight
 			
 				Behavior on color
 				{

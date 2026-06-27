@@ -89,7 +89,7 @@ Rectangle
         // Name & Size Column
         Column
         {
-            width: parent.width - fileIcon.width - parent.spacing
+            width: Math.max(0, parent.width - fileIcon.width - parent.spacing)
             anchors.verticalCenter: parent.verticalCenter
             spacing: 2
 

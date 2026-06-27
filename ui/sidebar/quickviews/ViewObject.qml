@@ -62,6 +62,9 @@ Rectangle
 	// Content
 	Column
 	{
+		id: contentColumn
+
+		width: viewObject.width - 8
 		anchors.centerIn: parent
 		spacing: 4
 
@@ -107,6 +110,9 @@ Rectangle
 			text: viewObject.label
 			font.pixelSize: Properties.fontM
 			color: mouseArea.pressed ? Properties.buttonHover : mouseArea.containsMouse ? Properties.button : Properties.textPrimary
+			horizontalAlignment: Text.AlignHCenter
+			elide: Text.ElideRight
+			width: contentColumn.width
 			anchors.horizontalCenter: parent.horizontalCenter
 
 			// Hover & Press Effect

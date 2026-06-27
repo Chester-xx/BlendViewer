@@ -176,21 +176,23 @@ Rectangle
             right: parent.right
         }
 
-        property real dragSX: 0
-        property real dragSW: 0
+        property real dragStartGlobalX: 0
+        property real dragStartWidth: 0
 
         onPressed: (mouse) =>
         {
-            dragSX = mouse.x
-            dragSW = Properties.sideBarWidth
+            var globalPos = mapToItem(null, mouse.x, mouse.y)
+            dragStartGlobalX = globalPos.x
+            dragStartWidth = sideBar.width
         }
 
         onPositionChanged: (mouse) =>
         {
             if (pressed)
             {
-                var delta = mouse.x - dragSX
-                Properties.sideBarWidth = dragSW + delta
+                var globalPos = mapToItem(null, mouse.x, mouse.y)
+                var delta = globalPos.x - dragStartGlobalX
+                Properties.sideBarWidth = dragStartWidth + delta
             }
         }
 

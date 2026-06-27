@@ -30,7 +30,7 @@ Window {
         {
             Properties.scale = Math.round((mainWindow.width / 1200) * 1000) / 1000
             Properties.scaleHeight = Math.round((mainWindow.height / 800) * 1000) / 1000
-            Properties.maximumSideBarWidth = Math.round(mainWindow.width / 3)
+            Properties.maximumSideBarWidth = Math.round(mainWindow.width / 2)
             Properties.minimumSideBarWidth = Math.round(mainWindow.width / 6)
         }
     }

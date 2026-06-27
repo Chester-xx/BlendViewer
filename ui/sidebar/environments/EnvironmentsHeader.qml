@@ -5,39 +5,45 @@ import QtQuick.Controls.impl
 import BlendViewer
 
 // Environments Header
-RowLayout
+Item
 {
     id: environmentsHeader
 
     width: parent.width
+    height: Math.max(sectionLabel.implicitHeight, activeIndicator.implicitHeight)
+
     Layout.fillWidth: true
-    Layout.topMargin: Properties.marginM
+    Layout.topMargin: Properties.marginXS
     Layout.leftMargin: Properties.marginM
     Layout.rightMargin: Properties.marginM
 
     // Section Label
     Text
     {
+        id: sectionLabel
+
         text: qsTr("ENVIRONMENT")
         font.pixelSize: Properties.fontL
         font.bold: true
         color: Properties.textPrimary
-        Layout.alignment: Qt.AlignLeft
+        elide: Text.ElideRight
+
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.left
+        anchors.right: activeIndicator.left
+        anchors.rightMargin: Properties.marginS
     }
     // - Section Label
 
-    // Spacer
-    Item 
-    {
-        Layout.fillWidth: true 
-    }
-    // - Spacer
-
     // Active Environment Indicator
-	RowLayout
+	Row
 	{
+		id: activeIndicator
+
 		spacing: Properties.fontS / 2
-		Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+
+		anchors.verticalCenter: parent.verticalCenter
+		anchors.right: parent.right
 
 		// Environment Active Notifier
 		IconImage
@@ -53,7 +59,7 @@ RowLayout
 			mipmap: true
 			color: Properties.button
 
-			Layout.alignment: Qt.AlignVCenter
+			anchors.verticalCenter: parent.verticalCenter
 
 			// Inactive Environment color effect
 			SequentialAnimation on color
@@ -94,7 +100,7 @@ RowLayout
 			font.pixelSize: Properties.fontM
 			color: Properties.textSecondary
 
-			Layout.alignment: Qt.AlignVCenter
+			anchors.verticalCenter: parent.verticalCenter
 		}
 		// - Active Environment Text
 	}
