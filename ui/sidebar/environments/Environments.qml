@@ -11,7 +11,7 @@ Rectangle
     property string activeEnv: "NONE"
 
     Layout.fillWidth: true
-    Layout.topMargin: Properties.marginXS
+    Layout.topMargin: Properties.sectionSpacing
     Layout.leftMargin: Properties.marginM
     Layout.rightMargin: Properties.marginM
     Layout.preferredHeight: envColumn.implicitHeight

@@ -10,7 +10,7 @@ Item
     height: sectionLabel.implicitHeight
 
     Layout.fillWidth: true
-    Layout.topMargin: Properties.marginXS
+    Layout.topMargin: Properties.sectionSpacing
     Layout.leftMargin: Properties.marginM
     Layout.rightMargin: Properties.marginM
 

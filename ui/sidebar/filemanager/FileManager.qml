@@ -11,7 +11,7 @@ Rectangle
 
     Layout.fillWidth: true
     
-    Layout.topMargin: Properties.marginXS
+    Layout.topMargin: Properties.sectionSpacing
     Layout.bottomMargin: Properties.marginS
 
     Layout.leftMargin: Properties.marginM

@@ -13,7 +13,7 @@ Rectangle
 
 	Layout.fillWidth: true
 	Layout.preferredHeight: Properties.cameraControlsComponent
-	Layout.topMargin: Properties.marginXS
+	Layout.topMargin: Properties.sectionSpacing
 	Layout.leftMargin: Properties.marginM
 	Layout.rightMargin: Properties.marginM
 

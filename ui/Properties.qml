@@ -47,6 +47,8 @@ QtObject
 		readonly property real marginS: scale * 12
 		readonly property real marginM: scale * 16
 		readonly property real marginL: scale * 20
+
+		readonly property real sectionSpacing: marginXS * 1.5
 	// - Spacing & Margin Scales
 
 	// Border Scales
