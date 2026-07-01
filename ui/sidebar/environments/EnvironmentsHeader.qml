@@ -1,5 +1,4 @@
 ﻿import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls.impl
 
 import BlendViewer
@@ -9,13 +8,9 @@ Item
 {
     id: environmentsHeader
 
-    width: parent.width
+    x: Properties.marginM
+    width: parent.width - Properties.marginM * 2
     height: Math.max(sectionLabel.implicitHeight, activeIndicator.implicitHeight)
-
-    Layout.fillWidth: true
-    Layout.topMargin: Properties.sectionSpacing
-    Layout.leftMargin: Properties.marginM
-    Layout.rightMargin: Properties.marginM
 
     // Section Label
     Text
@@ -28,10 +23,9 @@ Item
         color: Properties.textPrimary
         elide: Text.ElideRight
 
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.right: activeIndicator.left
-        anchors.rightMargin: Properties.marginS
+        y: (parent.height - height) / 2
+        x: 0
+        width: parent.width - activeIndicator.implicitWidth - Properties.marginS
     }
     // - Section Label
 
@@ -42,8 +36,8 @@ Item
 
 		spacing: Properties.fontS / 2
 
-		anchors.verticalCenter: parent.verticalCenter
-		anchors.right: parent.right
+		y: (parent.height - height) / 2
+		x: parent.width - implicitWidth
 
 		// Environment Active Notifier
 		IconImage

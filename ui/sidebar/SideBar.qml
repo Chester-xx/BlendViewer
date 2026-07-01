@@ -1,5 +1,4 @@
 ﻿import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls.Basic
 
 import BlendViewer
@@ -68,18 +67,20 @@ Rectangle
         }
 
         // Content Layout
-        ColumnLayout
+        Column
         {
             id: sideBarColumnLayout
 
-            width: parent.width
+            width: sideBar.width
             spacing: 0
 
             // ImportFileButton.qml
+            Item { width: 1; height: Properties.marginL }
             ImportFileButton
             {
                 id: importFileButton
             }
+            Item { width: 1; height: Properties.marginXS }
             // - ImportFileButton.qml
 
             // Import Label
@@ -88,12 +89,14 @@ Rectangle
                 text: qsTr("Drag & Drop .glTF or .glb Files")
                 font.pixelSize: Properties.fontSub
                 color: Properties.textSecondary
-                Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: Properties.marginL
+                width: sideBar.width
+                horizontalAlignment: Text.AlignHCenter
+                bottomPadding: Properties.marginL
             }
             // - Import Label
 
             // CameraControlsHeader.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             CameraControlsHeader
             {
                 id: cameraControlsHeader
@@ -101,6 +104,7 @@ Rectangle
             // - CameraControlsHeader.qml
 
             // CameraControls.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             CameraControls
             {
                 id: cameraControls
@@ -108,6 +112,7 @@ Rectangle
             // - CameraControls.qml
 
             // QuickViewsHeader.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             QuickViewsHeader
             {
                 id: quickViewsHeader
@@ -115,6 +120,7 @@ Rectangle
             // - QuickViewsHeader.qml
 
             // QuickViews.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             QuickViews
             {
                 id: quickViews
@@ -122,6 +128,7 @@ Rectangle
             // - QuickViews.qml
 
             // EnvironmentsHeader.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             EnvironmentsHeader
             {
                 id: environmentsHeader
@@ -129,6 +136,7 @@ Rectangle
             // - EnvironmentsHeader.qml
 
             // Environments.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             Environments
             {
                 id: environments
@@ -136,6 +144,7 @@ Rectangle
             // - Environments.qml
 
             // FileManagerHeader.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             FileManagerHeader
             {
                 id: fileManagerHeader
@@ -143,10 +152,12 @@ Rectangle
             // - FileManagerHeader.qml
 
             // FileManager.qml
+            Item { width: 1; height: Properties.sectionSpacing }
             FileManager
             {
                 id: fileManager
             }
+            Item { width: 1; height: Properties.marginS }
             // - FileManager.qml
         }
         // - Content Layout
@@ -165,7 +176,7 @@ Rectangle
     {
         id: resizeHandle
 
-        width: 8
+        width: 15
         hoverEnabled: true
         cursorShape: Qt.SizeHorCursor
 

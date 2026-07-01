@@ -11,11 +11,9 @@ Rectangle
 	color: Properties.controlBackground
 	radius: Properties.radiusM
 
-	Layout.fillWidth: true
-	Layout.preferredHeight: Properties.cameraControlsComponent
-	Layout.topMargin: Properties.sectionSpacing
-	Layout.leftMargin: Properties.marginM
-	Layout.rightMargin: Properties.marginM
+	x: Properties.marginM
+	width: parent.width - Properties.marginM * 2
+	height: Properties.cameraControlsComponent
 
 	border
 	{

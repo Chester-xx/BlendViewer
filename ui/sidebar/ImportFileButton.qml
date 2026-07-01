@@ -1,6 +1,5 @@
 ﻿import QtQuick
 import QtQuick.Controls.Basic
-import QtQuick.Layouts
 
 import BlendViewer
 
@@ -13,14 +12,8 @@ Button
     implicitHeight: Math.max(Properties.buttonH, labelText.implicitHeight + Properties.marginS)
     scale: importFileButton.pressed ? 0.98 : 1
 
-    Layout.fillWidth: true
-    Layout.alignment: Qt.AlignHCenter
-
-    Layout.topMargin: Properties.marginL
-    Layout.bottomMargin: Properties.marginXS
-
-    Layout.leftMargin: Properties.marginM
-    Layout.rightMargin: Properties.marginM
+    x: Properties.marginM
+    width: parent.width - Properties.marginM * 2
 
     ToolTip
     {

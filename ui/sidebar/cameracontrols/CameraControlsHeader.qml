@@ -1,5 +1,4 @@
 ﻿import QtQuick
-import QtQuick.Layouts
 
 import BlendViewer
 
@@ -8,13 +7,9 @@ Item
 {
     id: cameraControlsHeader
 
-    width: parent.width
+    x: Properties.marginM
+    width: parent.width - Properties.marginM * 2
     height: Math.max(sectionLabel.implicitHeight, resetCameraControls.implicitHeight)
-
-    Layout.fillWidth: true
-    Layout.topMargin: Properties.sectionSpacing
-    Layout.leftMargin: Properties.marginM
-    Layout.rightMargin: Properties.marginM
 
     // Section Label
     Text
@@ -27,10 +22,9 @@ Item
         color: Properties.textPrimary
         elide: Text.ElideRight
 
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.right: resetCameraControls.left
-        anchors.rightMargin: Properties.marginS
+        y: (parent.height - height) / 2
+        x: 0
+        width: parent.width - resetCameraControls.implicitWidth - Properties.marginS
     }
     // - Section Label
 
@@ -46,8 +40,8 @@ Item
         color: resetMouseArea.pressed ? Properties.lightButtonPressed : hovered ? Properties.lightButtonHover : Properties.lightButton
         scale: resetMouseArea.pressed ? 0.92 : 1.0
 
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.right: parent.right
+        y: (parent.height - height) / 2
+        x: parent.width - implicitWidth
 
         Behavior on color
         {
@@ -77,10 +71,6 @@ Item
 
             onEntered: resetCameraControls.hovered = true
             onExited: resetCameraControls.hovered = false
-            onClicked: 
-            {
-                
-            }
         }
         // - Click Effects
     }

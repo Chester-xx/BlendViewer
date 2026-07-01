@@ -9,11 +9,9 @@ Rectangle
 {
 	id: quickViews
 
-	Layout.fillWidth: true
-	Layout.topMargin: Properties.sectionSpacing
-	Layout.leftMargin: Properties.marginM
-	Layout.rightMargin: Properties.marginM
-	Layout.preferredHeight: viewGrid.implicitHeight
+	x: Properties.marginM
+	width: parent.width - Properties.marginM * 2
+	height: viewGrid.implicitHeight
 
 	color: "transparent"
 

@@ -9,15 +9,9 @@ Rectangle
 {
     id: fileManager
 
-    Layout.fillWidth: true
-    
-    Layout.topMargin: Properties.sectionSpacing
-    Layout.bottomMargin: Properties.marginS
-
-    Layout.leftMargin: Properties.marginM
-    Layout.rightMargin: Properties.marginM
-    
-    Layout.preferredHeight: fileColumn.implicitHeight
+    x: Properties.marginM
+    width: parent.width - Properties.marginM * 2
+    height: fileColumn.implicitHeight
 
     color: "transparent"
 
