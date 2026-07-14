@@ -2,8 +2,13 @@
 #include <QQmlApplicationEngine>
 #include <QDebug>
 
+#include <QQmlDebuggingEnabler>
+
 int main(int argc, char *argv[])
 {
+
+    QQmlDebuggingEnabler enabler;
+
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
