@@ -14,9 +14,20 @@
 
 ---
 
+### Current Iteration
+<img width="1911" height="1021" alt="image" src="https://github.com/user-attachments/assets/1f1f2a2b-f9ff-4337-9fee-4d0368c03b30" />
+
+### Baseline Profile
+<img width="3102" height="496" alt="image" src="https://github.com/user-attachments/assets/3091e283-c4d3-4047-bb28-b5a26207ec5a" />
+
+### Baseline Memory Allocation
+<img width="3100" height="699" alt="image" src="https://github.com/user-attachments/assets/f0e53fcd-3184-42d2-b05a-439fa8f23da2" />
+
+
+---
+
 ### Current Issues
 
-- **Unexpected Side Bar Resize Behavior** - On resize, occasionally glitches before reforming to its new size.
 - **`assets/models` Storage** - Currently storing models in the repository for testing. Deployment requires appdata storage.
 - **Viewport Placeholder** - Placeholder  object `Canvas` & `Rectangle` has been depricated for the use of gradients, deciding on implementation between svg or fragment shader based on performance.
 
