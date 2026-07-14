@@ -99,6 +99,11 @@ QtObject
 		readonly property color lightButtonPressed: "#1E7FE0"
 	// - Button Colors
 
+	// Indicator Colors
+		readonly property color greenOffIndicator: "#005F00"
+		readonly property color greenOnIndicator: "#00AF00"
+	// - Indicator Colors
+
 	// ToolTips
 		readonly property int tooltipDelay:   1500
 		readonly property int tooltipTimeout: 3000

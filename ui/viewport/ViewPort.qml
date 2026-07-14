@@ -21,7 +21,17 @@ Item
 	ViewPortPlaceHolder
 	{
 		id: viewPortPlaceHolder
+
 	}
 	// - ViewPortPlaceHolder.qml
+
+
+	// DisplayStatus.qml
+	DisplayStatus
+	{
+		id: displayStatus
+	}
+	// - DisplayStatus.qml
+
 }
 // Viewport

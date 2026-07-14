@@ -250,6 +250,8 @@ The UI design is inspired by 3D viewers such as:
 * Screenshot export
 * Shader customization
 * Linux & macOS builds
+* Store recent files in appdata
+* Clear button for recent files & Individual hover delete button
 
 ## License
 

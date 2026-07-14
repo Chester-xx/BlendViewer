@@ -60,6 +60,10 @@ Rectangle
         {
             spacing: Properties.marginM
             Layout.alignment: Qt.AlignVCenter
+            
+            // THE BELOW CAN BE ACCESSED BY RenderStats API (Qt 6.5+) i.e View3D.renderStats
+            // you can also access draw calls, vertices, passes 
+
             // StatusLabel.qml
             // - FPS Counter
             StatusLabel { icon: ""; value: "--"; label: "FPS:"; isFPS: true }
