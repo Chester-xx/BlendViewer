@@ -9,12 +9,14 @@ Rectangle
 {
 	id: displayStatus
 
-	x: Properties.marginS
-	y: Properties.marginS
-
     width: displayStatusIndicator.implicitWidth + Properties.marginM
-    height: Properties.baseComponentH / 3
+    height: Properties.baseComponentH / 2.5
 	color: Properties.tertiaryBackground
+
+	radius: width / 20
+
+	border.color: Properties.border
+	border.width: 1
 
 	anchors
 	{
@@ -22,7 +24,7 @@ Rectangle
 		left: parent.left
 
 		leftMargin: Properties.marginS
-        rightMargin: Properties.marginS
+        topMargin: Properties.marginS
 	}
 
 	ToolTip
@@ -39,9 +41,6 @@ Rectangle
         id: displayStatusIndicator
 
 		spacing: Properties.fontS / 2
-
-        y: (parent.height - height) / 2
-		x: parent.width - implicitWidth
 
 		anchors.centerIn: parent
 
