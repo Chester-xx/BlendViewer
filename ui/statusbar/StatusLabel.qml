@@ -24,10 +24,7 @@ Row
 		fillMode: Image.PreserveAspectFit
 		mipmap: true
 		
-		anchors
-		{
-			verticalCenter: parent.verticalCenter
-		}
+		anchors.verticalCenter: parent.verticalCenter
 	}
 	// - Label Icon
 

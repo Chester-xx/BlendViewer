@@ -30,7 +30,7 @@ Rectangle
 	ToolTip
     {
         visible: displayStatus.hovered
-        text: qsTr("Render loading and application loading status")
+        text: qsTr("Application and Render status")
         delay: Properties.tooltipDelay
         timeout: Properties.tooltipTimeout
     }

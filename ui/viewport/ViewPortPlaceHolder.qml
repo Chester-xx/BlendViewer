@@ -11,6 +11,7 @@ Item
     Rectangle
     {
         anchors.fill: parent
+        color: Properties.viewPortLightColor
     }
 }
 // - Viewport Placeholder

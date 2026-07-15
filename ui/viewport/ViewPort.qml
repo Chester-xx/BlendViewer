@@ -33,5 +33,12 @@ Item
 	}
 	// - DisplayStatus.qml
 
+	// GridStatus.qml
+	GridStatus
+	{
+		id: gridStatus
+	}
+	// - GridStatus.qml
+
 }
 // Viewport
