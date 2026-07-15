@@ -1,5 +1,6 @@
 ﻿import QtQuick
 import QtQuick.Controls.Basic
+import QtQuick.Controls.impl
 
 import BlendViewer
 
@@ -44,15 +45,18 @@ Rectangle
 		anchors.centerIn: parent
 
 		// Indicator
-		Image
+		IconImage
 		{
 			id: gridStatusIcon
 
 			source: Properties.iconSource + "grid.svg"
 			width: Properties.fontM
 			height: width
+			sourceSize.width: width
+			sourceSize.height: height
 			fillMode: Image.PreserveAspectFit
 			mipmap: true
+			color: Properties.textSecondary
 
 			anchors.verticalCenter: parent.verticalCenter
 		}

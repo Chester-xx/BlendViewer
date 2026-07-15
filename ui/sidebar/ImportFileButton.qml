@@ -74,6 +74,7 @@ Button
             Image
             {
                 id: importIcon
+
                 source: Properties.iconSource + "import.svg"
                 width: importFileButton.height * 7 / 12
                 height: importFileButton.height * 7 / 12
