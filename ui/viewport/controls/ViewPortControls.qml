@@ -74,6 +74,35 @@ Rectangle
 		}
 		// - Scale
 
+		// Category Spacer
+		Rectangle
+		{
+			width: parent.width * 0.8
+			height: 1
+			color: Properties.border
+
+			anchors.horizontalCenter: parent.horizontalCenter
+		}
+		// - Category Spacer
+
+		// Grid Toggle
+		ControlObject
+		{
+			id: gridToggleControlObject
+			tooltip: "Toggle Grid"
+			iconPath: "grid.svg"
+		}
+		// - Grid Toggle
+
+		// Wireframe Toggle
+		ControlObject
+		{
+			id: wireframeToggleControlObject
+			tooltip: "Toggle Wireframe"
+			iconPath: "wireframe.svg"
+		}
+		// - Wireframe Toggle
+
 	}
 // - Control Objects
 
