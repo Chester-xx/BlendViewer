@@ -56,6 +56,15 @@ Rectangle
 		}
 		// - Move
 
+		// Rotate
+		ControlObject
+		{
+			id: rotateControlObject
+			tooltip: "Rotate"
+			iconPath: "rotate.svg"
+		}
+		// - Rotate
+
 	}
 // - Control Objects
 
