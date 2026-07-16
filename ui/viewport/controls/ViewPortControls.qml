@@ -47,6 +47,15 @@ Rectangle
 		}
 		// - Select
 
+		// Move
+		ControlObject 
+		{
+				id: moveControlObject
+				tooltip: "Move"
+				iconPath: "move.svg"
+		}
+		// - Move
+
 	}
 // - Control Objects
 

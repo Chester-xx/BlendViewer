@@ -45,6 +45,7 @@ qt_add_qml_module(appBlendViewer
         assets/icons/environments/overcast.svg
 
         assets/icons/viewportcontrols/select.svg
+        assets/icons/viewportcontrols/move.svg
 )
 
 # Sub-module: Sidebar
