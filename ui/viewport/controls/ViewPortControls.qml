@@ -33,7 +33,7 @@ Rectangle
 	{
 		id: controlObjectsColumn
 
-		width: parent.width * 0.9
+		width: parent.width * 0.8
 		spacing: Properties.marginXS
 
 		anchors.centerIn: parent

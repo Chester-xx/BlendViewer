@@ -18,8 +18,8 @@ Rectangle
 	width: parent.width
 	height: width
 	
-	color: Properties.tertiaryBackground
-	radius: width / 20
+	color: mouseArea.pressed ? Properties.tertiaryBackground : mouseArea.containsMouse ? Properties.primaryBackground : Properties.tertiaryBackground
+	radius: width / 10
 
 	// Hover & Press Effect
 	Behavior on color
@@ -66,6 +66,7 @@ Rectangle
 				easing.type: Easing.InOutQuad
 			}
 		}
+
 		// Scale Effect
 		scale: mouseArea.containsMouse ? 1.05 : 1.0
 
