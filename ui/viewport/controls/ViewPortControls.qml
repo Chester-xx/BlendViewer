@@ -65,6 +65,15 @@ Rectangle
 		}
 		// - Rotate
 
+		// Scale
+		ControlObject
+		{
+			id: scaleControlObject
+			tooltip: "Scale"
+			iconPath: "scale.svg"
+		}
+		// - Scale
+
 	}
 // - Control Objects
 
