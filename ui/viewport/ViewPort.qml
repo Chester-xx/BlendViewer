@@ -40,5 +40,12 @@ Item
 	}
 	// - GridStatus.qml
 
+	// ViewPortControls.qml
+	ViewPortControls
+	{
+		id: viewPortControls
+	}
+	// - ViewPortControls.qml
+
 }
 // Viewport

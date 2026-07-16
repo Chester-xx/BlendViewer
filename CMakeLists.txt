@@ -94,6 +94,9 @@ qt_add_qml_module(BlendViewer_Viewport
 
         ui/viewport/overlays/DisplayStatus.qml
         ui/viewport/overlays/GridStatus.qml
+
+        ui/viewport/controls/ControlObject.qml
+        ui/viewport/controls/ViewPortControls.qml
 )
 
 # Link all modules into the main target
