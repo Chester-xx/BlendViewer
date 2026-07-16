@@ -27,9 +27,14 @@ Rectangle
         topMargin: Properties.marginS
 	}
 
+	HoverHandler
+	{
+		id: statusMouseWatcher
+	}
+
 	ToolTip
     {
-        visible: gridStatus.hovered
+        visible: statusMouseWatcher.hovered
         text: qsTr("Toggle grid status")
         delay: Properties.tooltipDelay
         timeout: Properties.tooltipTimeout
