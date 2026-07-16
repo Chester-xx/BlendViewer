@@ -39,11 +39,11 @@ Rectangle
 
             // StatusLabel.qml
             // - Meshes
-            StatusLabel { icon: Properties.iconSource + "mesh.svg"; value: "0"; label: "Meshes" }
+            StatusLabel { iconPath: Properties.iconSource + "mesh.svg"; value: "0"; label: "Meshes" }
             // - Vertices
-            StatusLabel { icon: Properties.iconSource + "vertices.svg"; value: "0"; label: "Vertices" }
+            StatusLabel { iconPath: Properties.iconSource + "vertices.svg"; value: "0"; label: "Vertices" }
             // - Materials
-            StatusLabel { icon: Properties.iconSource + "materials.svg"; value: "0"; label: "Materials" }
+            StatusLabel { iconPath: Properties.iconSource + "materials.svg"; value: "0"; label: "Materials" }
             // - StatusLabel.qml
         }
         // - Left Group
@@ -66,11 +66,11 @@ Rectangle
 
             // StatusLabel.qml
             // - FPS Counter
-            StatusLabel { icon: ""; value: "--"; label: "FPS:"; isFPS: true }
+            StatusLabel { iconPath: ""; value: "--"; label: "FPS:"; isFPS: true }
             // - Spacer
-            StatusLabel { icon: ""; value: "|"; label: "" }
+            StatusLabel { iconPath: ""; value: "|"; label: "" }
             // - RHI Pipeline
-            StatusLabel { icon: ""; value: Properties.rhi_pipeline; label: "" }
+            StatusLabel { iconPath: ""; value: Properties.rhi_pipeline; label: "" }
             // - StatusLabel.qml
         }
         // - Right Group

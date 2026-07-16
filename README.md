@@ -86,11 +86,17 @@ BlendViewer/
 │   │   │   ├── QuickViewsHeader.qml
 │   │   │   └── ViewObject.qml
 │   │   │
-│   │   └── environments/
-│   │       ├── Environments.qml
+│   │   ├── environments/
+│   │   │   ├── Environments.qml
+│   │   │   │
+│   │   │   ├── EnvironmentsHeader.qml
+│   │   │   └── EnvironmentObject.qml
+│   │   │
+│   │   └── filemanager/
+│   │       ├── FileManager.qml
 │   │       │
-│   │       ├── EnvironmentsHeader.qml
-│   │       └── EnvironmentObject.qml
+│   │       ├── FileManagerHeader.qml
+│   │       └── FileObject.qml
 │   │
 │   ├── statusbar/
 │   │   ├── StatusBar.qml
@@ -99,8 +105,15 @@ BlendViewer/
 │   │
 │   └── viewport/
 │       ├── ViewPort.qml
+│       ├── ViewPortPlaceHolder.qml
 │       │
-│       └── ViewPortPlaceHolder.qml
+│       ├── controls/
+│       │   ├── ViewPortControls.qml
+│       │   └── ControlObject.qml
+│       │
+│       └── overlays/
+│           ├── DisplayStatus.qml
+│           └── GridStatus.qml
 │
 ├── assets/
 │   ├── app.rc

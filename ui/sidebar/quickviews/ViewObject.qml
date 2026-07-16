@@ -11,7 +11,7 @@ Rectangle
 	id: viewObject
 
 	property string label
-	property string icon
+	property string iconPath
 	signal selected()
 
 	Layout.fillWidth: true
@@ -71,7 +71,7 @@ Rectangle
 		// Icon
 		IconImage
 		{
-			source: Properties.iconSource + viewObject.icon
+			source: Properties.iconSource + viewObject.iconPath
 			width: Properties.viewComponent
 			height: Properties.viewComponent
 			sourceSize.width: Properties.viewComponent

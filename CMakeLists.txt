@@ -43,6 +43,13 @@ qt_add_qml_module(appBlendViewer
         assets/icons/environments/sunset.svg
         assets/icons/environments/night.svg
         assets/icons/environments/overcast.svg
+
+        assets/icons/viewportcontrols/select.svg
+        assets/icons/viewportcontrols/move.svg
+        assets/icons/viewportcontrols/rotate.svg
+        assets/icons/viewportcontrols/scale.svg
+        assets/icons/viewportcontrols/grid.svg
+        assets/icons/viewportcontrols/wireframe.svg
 )
 
 # Sub-module: Sidebar
@@ -94,6 +101,9 @@ qt_add_qml_module(BlendViewer_Viewport
 
         ui/viewport/overlays/DisplayStatus.qml
         ui/viewport/overlays/GridStatus.qml
+
+        ui/viewport/controls/ControlObject.qml
+        ui/viewport/controls/ViewPortControls.qml
 )
 
 # Link all modules into the main target
