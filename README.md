@@ -15,8 +15,7 @@
 ---
 
 ### Current Iteration
-<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/a053991d-e40a-4c9e-b509-85723cad67ec" />
-
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2565dba8-600c-485d-83ca-6c0d311023f0" />
 
 ### Baseline Profile
 <img width="3102" height="496" alt="image" src="https://github.com/user-attachments/assets/3091e283-c4d3-4047-bb28-b5a26207ec5a" />
