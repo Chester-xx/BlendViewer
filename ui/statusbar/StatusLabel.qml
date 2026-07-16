@@ -1,12 +1,13 @@
 ﻿import QtQuick
-import QtQuick.Layouts
 
 import BlendViewer
 
 // Status Label
 Row
 {
-	property string icon
+	id: sLabel
+
+	property string iconPath
 	property string value
 	property string label
 	property bool isFPS: false
@@ -17,8 +18,8 @@ Row
 	// Label Icon
 	Image
 	{
-		visible: icon !== ""
-		source: icon
+		visible: sLabel.iconPath !== ""
+		source: sLabel.iconPath
 		width: Properties.baseComponentH / 3
 		height: width
 		fillMode: Image.PreserveAspectFit
@@ -31,7 +32,7 @@ Row
 	// Label Text & Value
 	Text
 	{
-		text: isFPS === true ? label + " " + value : (label !== "" ? value + " " + label : value)
+		text: sLabel.isFPS === true ? sLabel.label + " " + sLabel.value : (sLabel.label !== "" ? sLabel.value + " " + sLabel.label : sLabel.value)
 		font.pixelSize: Properties.fontS
 		color: Properties.textSecondary
 		elide: Text.ElideRight

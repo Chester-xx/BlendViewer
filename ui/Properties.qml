@@ -16,6 +16,7 @@ QtObject
 		readonly property string rootSource: "qrc:/qt/qml/BlendViewer/"
 		readonly property string iconSource: rootSource + "assets/icons/"
 		readonly property string iconSourceEnvironment: iconSource + "environments/"
+		readonly property string iconSourceViewportControls: iconSource + "viewportcontrols/"
 		readonly property string modelSource: rootSource + "assets/models/"
 	// - App Specifications
 
@@ -105,8 +106,8 @@ QtObject
 	// - Indicator Colors
 
 	// ToolTips
-		readonly property int tooltipDelay:   1500
-		readonly property int tooltipTimeout: 3000
+		readonly property int tooltipDelay:   800
+		readonly property int tooltipTimeout: 5000
 	// - ToolTips
 	
 }

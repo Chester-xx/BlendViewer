@@ -29,7 +29,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Top")
-			icon: "view-top.svg"
+			iconPath: "view-top.svg"
 			onSelected: {  }
 		}
 		// - Top
@@ -38,7 +38,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Bottom")
-			icon: "view-bottom.svg"
+			iconPath: "view-bottom.svg"
 			onSelected: {  }
 		}
 		// - Bottom
@@ -47,7 +47,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Perspective")
-			icon: "view-perspective.svg"
+			iconPath: "view-perspective.svg"
 			onSelected: {  }
 		}
 		// - Perspective
@@ -56,7 +56,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Left")
-			icon: "view-left.svg"
+			iconPath: "view-left.svg"
 			onSelected: {  }
 		}
 		// - Left
@@ -65,7 +65,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Front")
-			icon: "mesh.svg"
+			iconPath: "mesh.svg"
 			onSelected: {  }
 		}
 		// - Front
@@ -74,7 +74,7 @@ Rectangle
 		ViewObject
 		{
 			label: qsTr("Right")
-			icon: "view-right.svg"
+			iconPath: "view-right.svg"
 			onSelected: {  }
 		}
 		// - Right
