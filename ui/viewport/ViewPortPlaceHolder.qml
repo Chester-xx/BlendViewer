@@ -12,13 +12,15 @@ Item
     // Fragment Shader
     ShaderEffect
     {
+        anchors.fill: parent
+
         property color topC: Properties.viewPortLightColor
         property color bottomC: Properties.viewPortDarkColor
         property color gridColor: Properties.border
-        property real gridSize: 0.05
-        property real gridThickness: 1.0
-        fragmentShader: "qrc:/shaders/viewport.frag.qsb"
+        property real gridSize: 0.04
+        property real aspectRatio: width / height
 
+        fragmentShader: "qrc:/shaders/viewport.frag.qsb"
     }
     // - Fragment Shader
 
