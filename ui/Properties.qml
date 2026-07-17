@@ -18,6 +18,7 @@ QtObject
 		readonly property string iconSourceEnvironment: iconSource + "environments/"
 		readonly property string iconSourceViewportControls: iconSource + "viewportcontrols/"
 		readonly property string modelSource: rootSource + "assets/models/"
+		readonly property string iconSourceViewportPlaceholder: iconSource + "viewport/"
 	// - App Specifications
 
 	// Window Specifications

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect x="140" y="30" width="120" height="120" rx="12" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+  <g transform="translate(200, 90)" opacity="0.4">
+    <path d="M0 -22 L19 -11 L19 11 L0 22 L-19 11 L-19 -11 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M0 -22 L0 0 M19 -11 L0 0 M-19 -11 L0 0" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M0 0 L0 22" stroke="currentColor" stroke-width="1.5"/>
+  </g>
+  <text x="200" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="currentColor" opacity="0.6">No model loaded</text>
+  <text x="200" y="212" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="currentColor" opacity="0.35">Drag &amp; drop a .gltf or .glb file anywhere</text>
+</svg>

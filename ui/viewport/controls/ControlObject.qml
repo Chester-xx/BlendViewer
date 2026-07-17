@@ -1,7 +1,6 @@
 ﻿import QtQuick
 import QtQuick.Controls.Basic
 import QtQuick.Controls.impl
-import QtQuick.Layouts
 
 import BlendViewer
 
