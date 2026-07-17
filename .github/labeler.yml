@@ -1,0 +1,31 @@
+sidebar:
+  - changed-files:
+      - any-glob-to-any-file: "ui/sidebar/**"
+
+statusbar:
+  - changed-files:
+      - any-glob-to-any-file: "ui/statusbar/**"
+
+viewport:
+  - changed-files:
+      - any-glob-to-any-file: "ui/viewport/**"
+
+assets:
+  - changed-files:
+      - any-glob-to-any-file: "assets/**"
+
+build/tooling:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "CMakeLists.txt"
+          - "CMakePresets.json"
+          - "deploy.bat"
+          - ".github/**"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "README.md"
+          - "CONTRIBUTING.md"
+          - "SECURITY.md"
+          - "**/*.md"

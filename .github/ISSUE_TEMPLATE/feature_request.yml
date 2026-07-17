@@ -1,0 +1,39 @@
+name: Feature Request
+description: Suggest an idea or improvement for BlendViewer
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Is this related to something missing or frustrating?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - UI / Sidebar
+        - Viewport / Rendering
+        - Camera Controls
+        - File Import
+        - Build / Deployment
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Auto-inserts .gitmessage as the starting point for new commits.
+# Skips merges, squashes, amends, and commits made with -m (those already have a message).
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+
+if [ -z "$COMMIT_SOURCE" ] && [ -f "$(git rev-parse --show-toplevel)/.gitmessage" ]; then
+    cat "$(git rev-parse --show-toplevel)/.gitmessage" "$COMMIT_MSG_FILE" > "$COMMIT_MSG_FILE.new"
+    mv "$COMMIT_MSG_FILE.new" "$COMMIT_MSG_FILE"
+fi

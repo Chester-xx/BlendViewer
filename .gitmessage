@@ -1,0 +1,7 @@
+# <type>(<scope>): <short summary, imperative mood, no period>
+#
+# Body (optional): explain what and why, not how.
+#
+# Footer (optional): Closes #123, BREAKING CHANGE: ...
+#
+# Types: feat, fix, chore, docs, refactor, style, perf, test, build

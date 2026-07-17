@@ -1,0 +1,10 @@
+# Default owner for everything
+*                       @Chester-xx
+
+# Sub-module specific ownership (adjust/add collaborators as the team grows)
+/ui/sidebar/            @Chester-xx
+/ui/statusbar/          @Chester-xx
+/ui/viewport/           @Chester-xx
+/assets/                @Chester-xx
+CMakeLists.txt          @Chester-xx
+CMakePresets.json       @Chester-xx
