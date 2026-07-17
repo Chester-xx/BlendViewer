@@ -16,6 +16,16 @@ set_source_files_properties(ui/Properties.qml
     PROPERTIES QT_QML_SINGLETON_TYPE TRUE
 )
 
+# Compile Shader .frag -> .qsb
+qt_add_shaders(appBlendViewer "viewport_shader"
+    PREFIX
+        "/shaders"
+    BASE
+        "assets/shaders"
+    FILES
+        "assets/shaders/viewport.frag"
+)
+
 # Root QML module
 # URI = "BlendViewer" → unique output dir: BlendViewer/
 qt_add_qml_module(appBlendViewer
@@ -50,6 +60,8 @@ qt_add_qml_module(appBlendViewer
         assets/icons/viewportcontrols/scale.svg
         assets/icons/viewportcontrols/grid.svg
         assets/icons/viewportcontrols/wireframe.svg
+
+        assets/icons/viewport/icon.svg
 )
 
 # Sub-module: Sidebar

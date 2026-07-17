@@ -27,9 +27,14 @@ Rectangle
         topMargin: Properties.marginS
 	}
 
+	HoverHandler
+	{
+		id: statusMouseWatcher
+	}
+
 	ToolTip
     {
-        visible: displayStatus.hovered
+        visible: statusMouseWatcher.hovered
         text: qsTr("Application and Render status")
         delay: Properties.tooltipDelay
         timeout: Properties.tooltipTimeout

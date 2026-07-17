@@ -15,7 +15,6 @@ Window {
     height: Screen.height * 1 / 2
     minimumWidth: Properties.minimumWidth
     minimumHeight: Properties.minimumHeight
-    color: Properties.primaryBackground
     title: qsTr("BlendViewer")
 
     // Throttled scale recalculation

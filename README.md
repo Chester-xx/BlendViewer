@@ -115,8 +115,13 @@ BlendViewer/
 │           └── GridStatus.qml
 │
 ├── assets/
-│   ├── app.rc
-│   └── icons/
+│   ├── blendviewer.rc
+│   ├── icons/
+│   │   ├── environments/
+│   │   └── viewportcontrols/
+│   ├── models/
+│   └── shaders/
+│       └── viewport.frag
 │
 ├── build-debug/
 ├── build-release/
