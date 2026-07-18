@@ -6,6 +6,7 @@ import BlendViewer.SideBar
 import BlendViewer.StatusBar
 import BlendViewer.Viewport
 
+// Main Window
 Window {
 
     id: mainWindow
@@ -75,3 +76,4 @@ Window {
     // - ViewPort.qml
 
 }
+// - Main Window
