@@ -15,7 +15,29 @@
 
 ---
 
-### Current Iteration
+### Current Sprint Focus
+
+#### App Data File System | Cross-platform local data manager
+
+```
+%LOCALAPPDATA%/BlendViewer/
+├── manifest.json              ← schema version + integrity metadata
+├── config/
+│   └── settings.json          ← window state, sidebar width, camera speed, last environment
+├── cache/
+│   ├── thumbnails/            ← generated preview thumbnails per model
+│   └── converted/             ← any preprocessed/optimized model data
+├── logs/
+│   ├── blendviewer.log        ← current session
+│   └── blendviewer-2026-07-21.log   ← rotated
+├── recent/
+│   └── recent_files.json      ← recently opened model paths + metadata
+└── imports/                   ← optional: copies of imported models if you want managed storage
+```
+
+---
+
+### Current UI Iteration
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/5a494caf-2570-4461-85a1-0769236312d7" />
 
 ### Baseline Profile

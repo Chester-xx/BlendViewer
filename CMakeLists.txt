@@ -9,6 +9,9 @@ set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 qt_add_executable(appBlendViewer
     main.cpp
     assets/blendviewer.rc
+
+    src/utils/AppDataManager.h
+    src/utils/AppDataManager.cpp
 )
 
 # Singleton declaration
@@ -129,6 +132,12 @@ target_link_libraries(appBlendViewer
     BlendViewer_SideBar
     BlendViewer_StatusBar
     BlendViewer_Viewport
+)
+
+# define source folder location
+target_include_directories(appBlendViewer
+    PRIVATE
+        ${CMAKE_SOURCE_DIR}/src
 )
 
 # Install rules
