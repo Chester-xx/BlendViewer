@@ -2,12 +2,17 @@
 #include <QQmlApplicationEngine>
 #include <QDebug>
 
+#include "src/utils/AppDataManager.h"
+
+// debug
 #include <QQmlDebuggingEnabler>
 
 int main(int argc, char *argv[])
 {
 
     QQmlDebuggingEnabler enabler;
+
+    AppDataManager::initialize();
 
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
