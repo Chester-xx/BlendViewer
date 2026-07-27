@@ -2,7 +2,7 @@
 
 
 <!-- ![Status](https://img.shields.io/badge/status-prerelease-blue?logo=github) -->
-![Status](https://img.shields.io/badge/-Under%20Development%20|%20UI%20Integration-orange?logo=github)
+![Status](https://img.shields.io/badge/-Under%20Development%20|%20File%20System%20Integration-orange?logo=github)
 [![CodeQL Advanced](https://github.com/Chester-xx/BlendViewer/actions/workflows/codeql.yml/badge.svg)](https://github.com/Chester-xx/BlendViewer/actions/workflows/codeql.yml)
 
 ---
